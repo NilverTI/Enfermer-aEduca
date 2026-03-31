@@ -847,8 +847,22 @@ img, svg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   gap: 16px;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-info {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .footer-brand {
@@ -861,6 +875,7 @@ img, svg {
 .footer p {
   color: hsl(var(--c-text-muted));
   max-width: 400px;
+  margin: 0;
 }
 
 .footer-bottom {
@@ -1059,5 +1074,16 @@ img, svg {
     width: calc(100% - 48px);
     right: 24px;
     bottom: 100px;
+  }
+
+  .footer-top {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 32px;
+  }
+  
+  .footer-info {
+    text-align: center;
+    align-items: center;
   }
 }
