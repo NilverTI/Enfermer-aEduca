@@ -34,7 +34,33 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll);
 
     // ==========================================
-    // 2. Bot Panel Toggle with ARIA Support
+    // 2. Mobile Menu Toggle
+    // ==========================================
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-links a');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            const isActive = navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', isActive);
+            document.body.style.overflow = isActive ? 'hidden' : ''; // Evita scroll de fondo
+        });
+
+        // Cerrar menú al hacer clic en un enlace (Smooth UX)
+        navLinksItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+
+    // ==========================================
+    // 3. Bot Panel Toggle with ARIA Support
     // ==========================================
     const botBtn = document.getElementById('botBtn');
     const botPanel = document.getElementById('botPanel');
