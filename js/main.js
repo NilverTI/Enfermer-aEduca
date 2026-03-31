@@ -158,6 +158,41 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(el => revealObserver.observe(el));
 
     // ==========================================
+    // 5. ScrollSpy (Active Nav Link)
+    // ==========================================
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.nav-links a');
+
+    const scrollSpyOptions = {
+        root: null,
+        rootMargin: '-20% 0px -70% 0px', // Detect when section is roughly in the middle
+        threshold: 0
+    };
+
+    const scrollSpyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navItems.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, scrollSpyOptions);
+
+    sections.forEach(section => scrollSpyObserver.observe(section));
+
+    // Clear active if at the absolute top
+    window.addEventListener('scroll', () => {
+        if (window.scrollY < 100) {
+            navItems.forEach(link => link.classList.remove('active'));
+        }
+    });
+
+    // ==========================================
     // 5. Topic Cards Modal Logic
     // ==========================================
     const topCardElements = document.querySelectorAll('.topic-card');

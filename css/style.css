@@ -173,6 +173,11 @@ svg {
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  transition: height var(--trans-normal);
+}
+
+.nav-scrolled .nav-wrap {
+  height: clamp(60px, 8vh, 70px);
 }
 
 .brand {
@@ -216,9 +221,11 @@ svg {
 }
 
 .nav-links a:hover,
-.nav-links a:focus-visible {
-  background: hsl(var(--c-primary) / 0.08);
+.nav-links a:focus-visible,
+.nav-links a.active {
+  background: hsl(var(--c-primary) / 0.1);
   color: hsl(var(--c-primary-dark));
+  font-weight: 600;
 }
 
 .nav-cta a {
@@ -1577,5 +1584,178 @@ svg {
 
   .modal-title {
     font-size: 1.2rem;
+  }
+}
+
+/* =========================================
+   Nuevas Mejoras Profesor (Visual Impact)
+   ========================================= */
+
+.hero-impact-hook {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(var(--c-primary-dark));
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.hero-subtitle strong {
+  color: hsl(var(--c-primary-dark));
+  font-weight: 700;
+}
+
+/* Redes Sociales Premium Stack */
+.social-stack-premium {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  padding: 20px 24px;
+  border-radius: var(--rad-lg);
+  background: white;
+  border: 1px solid hsl(var(--c-border));
+  transition: all var(--trans-normal);
+  text-decoration: none;
+  color: hsl(var(--c-dark));
+  box-shadow: var(--shadow-sm);
+}
+
+.social-btn:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-md);
+  border-color: hsl(var(--c-primary) / 0.3);
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+  transition: var(--trans-fast);
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-info {
+  flex: 1;
+}
+
+.social-info strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.social-info span {
+  font-size: 0.85rem;
+  color: hsl(var(--c-text-muted));
+}
+
+.social-arrow {
+  font-weight: 700;
+  color: hsl(var(--c-primary));
+  opacity: 0.5;
+  transition: var(--trans-fast);
+}
+
+.social-btn:hover .social-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* Colors for specific social buttons */
+.tiktok-premium .social-icon {
+  background: #000;
+  color: #fff;
+}
+
+.instagram-premium .social-icon {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #fff;
+}
+
+.whatsapp-premium .social-icon {
+  background: #25D366;
+  color: #fff;
+}
+
+/* Final Impact Section */
+.final-impact {
+  padding: 100px 0;
+  background: linear-gradient(to bottom, transparent, hsl(var(--c-primary) / 0.03));
+  text-align: center;
+}
+
+.impact-wrap {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.impact-text {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 32px;
+  color: hsl(var(--c-dark));
+}
+
+.impact-text .highlight {
+  color: hsl(var(--c-primary));
+  position: relative;
+  display: inline-block;
+}
+
+.impact-text .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: hsl(var(--c-primary) / 0.1);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.impact-divider {
+  width: 60px;
+  height: 4px;
+  background: hsl(var(--c-primary));
+  margin: 0 auto 32px;
+  border-radius: var(--rad-full);
+}
+
+.impact-sub {
+  font-size: 1.25rem;
+  color: hsl(var(--c-text-muted));
+  font-weight: 500;
+}
+
+/* Responsive adjustments for social stack */
+@media (max-width: 600px) {
+  .social-btn {
+    padding: 16px;
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+  }
+  
+  .social-info strong {
+    font-size: 1rem;
   }
 }
