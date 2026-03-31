@@ -132,8 +132,60 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(el => revealObserver.observe(el));
 
     // ==========================================
-    // 5. Accordion Exclusive State (Optional)
+    // 5. Topic Cards Modal Logic
     // ==========================================
-    // The details name="ejes" attribute in HTML does this natively in modern browsers,
-    // but just as a fallback/enhancement, we leave the DOM to handle the <details name="val">
+    const topCardElements = document.querySelectorAll('.topic-card');
+    const modalOverlay = document.getElementById('globalTopicModal');
+    const modalBodyWrapper = document.getElementById('topicModalBody');
+    const modalCloseBtn = document.getElementById('closeTopicModal');
+
+    if (topCardElements.length > 0 && modalOverlay) {
+        // Function to close modal
+        const closeTopicModal = () => {
+            modalOverlay.classList.remove('active');
+            modalOverlay.setAttribute('aria-hidden', 'true');
+            // Remove content after animation finishes
+            setTimeout(() => {
+                modalBodyWrapper.innerHTML = '';
+            }, 300);
+        };
+
+        // Escuchar clics en tarjetas
+        topCardElements.forEach(card => {
+            card.addEventListener('click', () => {
+                const hiddenContent = card.querySelector('.topic-hidden-content');
+                if (hiddenContent) {
+                    modalBodyWrapper.innerHTML = hiddenContent.innerHTML;
+                    modalOverlay.classList.add('active');
+                    modalOverlay.setAttribute('aria-hidden', 'false');
+                }
+            });
+
+            // Accesibilidad con teclado (Enter/Space)
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    card.click();
+                }
+            });
+        });
+
+        // Eventos para cerrar el modal
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', closeTopicModal);
+        }
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeTopicModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeTopicModal();
+            }
+        });
+    }
+
 });

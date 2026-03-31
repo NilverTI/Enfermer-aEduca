@@ -44,7 +44,7 @@
                 <a href="#proyecto" role="menuitem">Proyecto</a>
                 <a href="#contenido" role="menuitem">Contenido</a>
                 <a href="#equipo" role="menuitem">Equipo</a>
-                <a href="#donaciones" role="menuitem">Apoyo</a>
+                <a href="#comunidad" role="menuitem">Apoyo</a>
             </div>
             <!-- Botón de acción para el CTA de la barra -->
             <div class="nav-cta">
@@ -67,7 +67,7 @@
                 </p>
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="#contenido">Explorar Temas</a>
-                    <a class="btn btn-secondary" href="#donaciones">
+                    <a class="btn btn-secondary" href="#comunidad">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
@@ -90,54 +90,68 @@
     </header>
 
     <main>
-        <!-- Bento Box Section: Proyecto y Equipo -->
-        <section id="proyecto" class="section-container container">
-            <div class="section-header fade-up">
-                <h2>El Proyecto</h2>
-                <p>Nuestra visión para democratizar la salud en la comunidad.</p>
-            </div>
+        <!-- Sección de Proyecto Minimalista -->
+        <section id="proyecto" class="section-container container" style="margin-top: 30px;">
+            <div class="project-minimal-layout fade-up">
 
-            <!-- Grid Bento -->
-            <div class="bento-grid fade-up" style="animation-delay: 0.15s;">
+                <div class="project-minimal-header">
+                    <span
+                        style="color: hsl(var(--c-primary)); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 12px; display: inline-block;">El
+                        Proyecto</span>
+                    <h2
+                        style="font-family: var(--font-display); font-size: 2.8rem; line-height: 1.1; margin-bottom: 24px; color: hsl(var(--c-dark)); font-weight: 800; letter-spacing: -1px;">
+                        Democratizando <br>
+                        <span style="color: hsl(var(--c-primary-dark));">la salud de la comunidad.</span>
+                    </h2>
+                    <p
+                        style="font-size: 1.15rem; color: hsl(var(--c-text-muted)); line-height: 1.65; max-width: 500px;">
+                        Esta plataforma educativa en enfermería reúne información organizada sobre temas esenciales del
+                        cuidado y promoción de la salud. Su propósito es brindar orientación práctica, confiable y
+                        accesible, acercando los temas médicos a todos los hogares.
+                    </p>
+                </div>
 
-                <!-- Bento Item 1: Sobre el Proyecto (Grande) -->
-                <article class="bento-card col-span-2 bento-primary">
-                    <div class="bento-content">
-                        <h3>Sobre el proyecto</h3>
-                        <p class="bento-text">
-                            Esta plataforma educativa de enfermería reúne información organizada sobre temas esenciales del cuidado y la promoción de la salud. Su propósito es brindar orientación práctica y comprensible, tanto para el público general como para quienes se están formando o desempeñando en el área técnica y profesional de enfermería.
-                        </p>
-                        <div class="mission-grid" style="align-items: start;">
-                            <div class="mission-item" style="align-items: start;">
-                                <div class="icon-box" style="margin-top: 4px;">🎯</div>
-                                <div>
-                                    <strong>Objetivo</strong>
-                                    <span style="display: block; margin-top: 4px; line-height: 1.5;">Compartir conocimientos de salud de forma clara, confiable y útil para apoyar el aprendizaje, el autocuidado y la prevención.</span>
-                                </div>
-                            </div>
-                            <div class="mission-item" style="align-items: start;">
-                                <div class="icon-box" style="margin-top: 4px;">🚀</div>
-                                <div>
-                                    <strong>Enfoque</strong>
-                                    <span style="display: block; margin-top: 4px; line-height: 1.5;">Educación en salud dirigida a la comunidad, estudiantes y técnicos de enfermería mediante contenido digital accesible y práctico.</span>
-                                </div>
-                            </div>
+                <div class="project-minimal-features">
+                    <div class="min-feature">
+                        <div class="min-icon-wrapper">
+                            <!-- Icono de Objetivo -->
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <line x1="21.17" y1="8" x2="12" y2="8"></line>
+                                <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+                                <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+                            </svg>
+                        </div>
+                        <div class="min-feature-text">
+                            <h4>Objetivo Central</h4>
+                            <p>Compartir conocimientos útiles de salud para apoyar el aprendizaje clínico, el
+                                autocuidado directo y la prevención responsable de enfermedades.</p>
                         </div>
                     </div>
-                </article>
 
-                <!-- Bento Item 3: Apoyo (QR) -->
-                <article id="donaciones" class="bento-card bento-accent">
-                    <div class="bento-content donacion-content">
-                        <img src="img/QR.jpeg" alt="Código QR Yape" class="real-qr" loading="lazy">
-                        <h3>Apoya el Proyecto</h3>
-                        <p>Mejora nuestra plataforma con tu aporte.</p>
+                    <div class="min-feature">
+                        <div class="min-icon-wrapper">
+                            <!-- Icono de Comunidad -->
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="min-feature-text">
+                            <h4>Enfoque Comunitario</h4>
+                            <p>Educación dirigida a la comunidad general, estudiantes y personal técnico formativo
+                                mediante un contenido interactivo 100% digital.</p>
+                        </div>
                     </div>
-                </article>
+                </div>
 
             </div>
         </section>
-
         <!-- Ejes Temáticos -->
         <section id="contenido" class="section-container container" style="margin-top: 60px;">
             <div class="section-header fade-up">
@@ -146,24 +160,24 @@
                     recomendaciones y referencia.</p>
             </div>
 
-            <div class="accordion-container fade-up" style="animation-delay: 0.1s;">
+            <div class="topics-grid fade-up" style="animation-delay: 0.1s;">
                 <!-- Topic 1 -->
-                <details class="premium-accordion" name="ejes">
-                    <summary class="accordion-trigger">
-                        <div class="acc-info">
-                            <span class="acc-num">01</span>
-                            <div>
-                                <h3 class="acc-title">🫀 CONTROL DE LA PRESIÓN ARTERIAL</h3>
-                                <p class="acc-desc">Mantener la presión arterial controlada es fundamental para prevenir
-                                    enfermedades del corazón, derrames cerebrales y problemas renales.</p>
-                            </div>
-                        </div>
-                        <div class="acc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="m6 9 6 6 6-6" />
-                            </svg></div>
-                    </summary>
-                    <div class="accordion-content">
+                <article class="topic-card" tabindex="0" role="button" aria-expanded="false">
+                    <div class="topic-card-header">
+                        <span class="acc-num">01</span>
+                    </div>
+                    <div class="topic-card-body">
+                        <h3 class="acc-title">🫀 CONTROL DE LA PRESIÓN ARTERIAL</h3>
+                        <p class="acc-desc">Mantener la presión arterial controlada es fundamental para prevenir
+                            enfermedades del corazón, derrames cerebrales y problemas renales.</p>
+                    </div>
+                    <div class="topic-card-footer">
+                        <span class="view-more">Ver detalles →</span>
+                    </div>
+
+                    <!-- Contenido Secreto (Modal) -->
+                    <div class="topic-hidden-content" style="display: none;">
+                        <h2 class="modal-title">🫀 CONTROL DE LA PRESIÓN ARTERIAL</h2>
                         <div class="acc-inner">
                             <h4>Información completa</h4>
                             <p>La presión arterial es la fuerza que ejerce la sangre contra las arterias, y cuando se
@@ -210,25 +224,23 @@
                                 Hipertensión. https://www.who.int/es/news-room/fact-sheets/detail/hypertension</div>
                         </div>
                     </div>
-                </details>
+                </article>
 
                 <!-- Topic 2 -->
-                <details class="premium-accordion" name="ejes">
-                    <summary class="accordion-trigger">
-                        <div class="acc-info">
-                            <span class="acc-num">02</span>
-                            <div>
-                                <h3 class="acc-title">🥗 ALIMENTACIÓN SALUDABLE</h3>
-                                <p class="acc-desc">Una alimentación saludable ayuda a mantener el cuerpo fuerte y
-                                    prevenir enfermedades como diabetes, obesidad y problemas cardíacos.</p>
-                            </div>
-                        </div>
-                        <div class="acc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="m6 9 6 6 6-6" />
-                            </svg></div>
-                    </summary>
-                    <div class="accordion-content">
+                <article class="topic-card" tabindex="0" role="button" aria-expanded="false">
+                    <div class="topic-card-header">
+                        <span class="acc-num">02</span>
+                    </div>
+                    <div class="topic-card-body">
+                        <h3 class="acc-title">🥗 ALIMENTACIÓN SALUDABLE</h3>
+                        <p class="acc-desc">Una alimentación saludable ayuda a mantener el cuerpo fuerte y prevenir
+                            enfermedades como diabetes, obesidad y problemas cardíacos.</p>
+                    </div>
+                    <div class="topic-card-footer">
+                        <span class="view-more">Ver detalles →</span>
+                    </div>
+                    <div class="topic-hidden-content" style="display: none;">
+                        <h2 class="modal-title">🥗 ALIMENTACIÓN SALUDABLE</h2>
                         <div class="acc-inner">
                             <h4>Información completa</h4>
                             <p>Se basa en consumir alimentos naturales y equilibrados.</p>
@@ -272,25 +284,23 @@
                                 saludable. https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet</div>
                         </div>
                     </div>
-                </details>
+                </article>
 
                 <!-- Topic 3 -->
-                <details class="premium-accordion" name="ejes">
-                    <summary class="accordion-trigger">
-                        <div class="acc-info">
-                            <span class="acc-num">03</span>
-                            <div>
-                                <h3 class="acc-title">💊 USO CORRECTO DE MEDICAMENTOS</h3>
-                                <p class="acc-desc">El uso adecuado de medicamentos permite tratar enfermedades de forma
-                                    segura y eficaz. Un mal uso puede provocar complicaciones.</p>
-                            </div>
-                        </div>
-                        <div class="acc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="m6 9 6 6 6-6" />
-                            </svg></div>
-                    </summary>
-                    <div class="accordion-content">
+                <article class="topic-card" tabindex="0" role="button" aria-expanded="false">
+                    <div class="topic-card-header">
+                        <span class="acc-num">03</span>
+                    </div>
+                    <div class="topic-card-body">
+                        <h3 class="acc-title">💊 USO CORRECTO DE MEDICAMENTOS</h3>
+                        <p class="acc-desc">El uso adecuado de medicamentos permite tratar enfermedades de forma segura
+                            y eficaz. Un mal uso puede provocar complicaciones.</p>
+                    </div>
+                    <div class="topic-card-footer">
+                        <span class="view-more">Ver detalles →</span>
+                    </div>
+                    <div class="topic-hidden-content" style="display: none;">
+                        <h2 class="modal-title">💊 USO CORRECTO DE MEDICAMENTOS</h2>
                         <div class="acc-inner">
                             <h4>Información completa</h4>
                             <p>Para un uso correcto:</p>
@@ -339,25 +349,23 @@
                                 https://medlineplus.gov/spanish/medicinesafety.html</div>
                         </div>
                     </div>
-                </details>
+                </article>
 
                 <!-- Topic 4 -->
-                <details class="premium-accordion" name="ejes">
-                    <summary class="accordion-trigger">
-                        <div class="acc-info">
-                            <span class="acc-num">04</span>
-                            <div>
-                                <h3 class="acc-title">🚑 PRIMEROS AUXILIOS</h3>
-                                <p class="acc-desc">Los primeros auxilios son acciones inmediatas que se realizan en una
-                                    emergencia para ayudar a una persona antes de que llegue atención médica.</p>
-                            </div>
-                        </div>
-                        <div class="acc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="m6 9 6 6 6-6" />
-                            </svg></div>
-                    </summary>
-                    <div class="accordion-content">
+                <article class="topic-card" tabindex="0" role="button" aria-expanded="false">
+                    <div class="topic-card-header">
+                        <span class="acc-num">04</span>
+                    </div>
+                    <div class="topic-card-body">
+                        <h3 class="acc-title">🚑 PRIMEROS AUXILIOS</h3>
+                        <p class="acc-desc">Los primeros auxilios son acciones inmediatas que se realizan en una
+                            emergencia para ayudar a una persona antes de que llegue atención médica.</p>
+                    </div>
+                    <div class="topic-card-footer">
+                        <span class="view-more">Ver detalles →</span>
+                    </div>
+                    <div class="topic-hidden-content" style="display: none;">
+                        <h2 class="modal-title">🚑 PRIMEROS AUXILIOS</h2>
                         <div class="acc-inner">
                             <h4>Información completa</h4>
                             <p>Acciones básicas:</p>
@@ -397,25 +405,23 @@
                                 https://www.cruzroja.es/principal/web/guest/primeros-auxilios</div>
                         </div>
                     </div>
-                </details>
+                </article>
 
                 <!-- Topic 5 -->
-                <details class="premium-accordion" name="ejes">
-                    <summary class="accordion-trigger">
-                        <div class="acc-info">
-                            <span class="acc-num">05</span>
-                            <div>
-                                <h3 class="acc-title">👵 CUIDADO DEL ADULTO MAYOR</h3>
-                                <p class="acc-desc">El cuidado del adulto mayor busca mantener su bienestar físico,
-                                    emocional y social, mejorando su calidad de vida.</p>
-                            </div>
-                        </div>
-                        <div class="acc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="m6 9 6 6 6-6" />
-                            </svg></div>
-                    </summary>
-                    <div class="accordion-content">
+                <article class="topic-card" tabindex="0" role="button" aria-expanded="false">
+                    <div class="topic-card-header">
+                        <span class="acc-num">05</span>
+                    </div>
+                    <div class="topic-card-body">
+                        <h3 class="acc-title">👵 CUIDADO DEL ADULTO MAYOR</h3>
+                        <p class="acc-desc">El cuidado del adulto mayor busca mantener su bienestar físico, emocional y
+                            social, mejorando su calidad de vida.</p>
+                    </div>
+                    <div class="topic-card-footer">
+                        <span class="view-more">Ver detalles →</span>
+                    </div>
+                    <div class="topic-hidden-content" style="display: none;">
+                        <h2 class="modal-title">👵 CUIDADO DEL ADULTO MAYOR</h2>
                         <div class="acc-inner">
                             <h4>Información completa</h4>
                             <p>Cuidados importantes:</p>
@@ -455,25 +461,23 @@
                                 https://medlineplus.gov/spanish/olderadulthealth.html</div>
                         </div>
                     </div>
-                </details>
+                </article>
 
                 <!-- Topic 6 -->
-                <details class="premium-accordion" name="ejes">
-                    <summary class="accordion-trigger">
-                        <div class="acc-info">
-                            <span class="acc-num">06</span>
-                            <div>
-                                <h3 class="acc-title">🛡 PREVENCIÓN DE ENFERMEDADES</h3>
-                                <p class="acc-desc">La prevención es clave para evitar enfermedades y mantener una vida
-                                    saludable.</p>
-                            </div>
-                        </div>
-                        <div class="acc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="m6 9 6 6 6-6" />
-                            </svg></div>
-                    </summary>
-                    <div class="accordion-content">
+                <article class="topic-card" tabindex="0" role="button" aria-expanded="false">
+                    <div class="topic-card-header">
+                        <span class="acc-num">06</span>
+                    </div>
+                    <div class="topic-card-body">
+                        <h3 class="acc-title">🛡 PREVENCIÓN DE ENFERMEDADES</h3>
+                        <p class="acc-desc">La prevención es clave para evitar enfermedades y mantener una vida
+                            saludable.</p>
+                    </div>
+                    <div class="topic-card-footer">
+                        <span class="view-more">Ver detalles →</span>
+                    </div>
+                    <div class="topic-hidden-content" style="display: none;">
+                        <h2 class="modal-title">🛡 PREVENCIÓN DE ENFERMEDADES</h2>
                         <div class="acc-inner">
                             <h4>Información completa</h4>
                             <p>Medidas principales:</p>
@@ -513,8 +517,7 @@
                                 de enfermedades. https://www.who.int/es</div>
                         </div>
                     </div>
-                </details>
-
+                </article>
             </div>
         </section>
 
@@ -532,85 +535,113 @@
             <div class="team-grid-cards fade-up">
                 <!-- Miembro 1 -->
                 <div class="team-card-visual">
-                    <div class="team-avatar avatar-girl girl-1"></div>
+                    <img src="img/F1.jpeg" alt="Mauricio Salvador Noemi Analy" class="team-avatar">
                     <h4 class="team-name">Mauricio Salvador Noemi Analy</h4>
                     <p class="team-role">Investigación y contenidos.</p>
                 </div>
                 <!-- Miembro 2 -->
                 <div class="team-card-visual">
-                    <div class="team-avatar avatar-girl girl-2"></div>
+                    <img src="img/F2.jpeg" alt="Ventura Henostroza Ana Paula" class="team-avatar">
                     <h4 class="team-name">Ventura Henostroza Ana Paula</h4>
                     <p class="team-role">Apoyo en redacción y propuesta visual.</p>
                 </div>
                 <!-- Miembro 3 -->
                 <div class="team-card-visual">
-                    <div class="team-avatar avatar-girl girl-3"></div>
+                    <img src="img/F5.jpeg" alt="Castillo Castro Greace Stephanie" class="team-avatar">
                     <h4 class="team-name">Castillo Castro Greace Stephanie</h4>
                     <p class="team-role">Coordinación y revisión de contenidos.</p>
                 </div>
                 <!-- Miembro 4 -->
                 <div class="team-card-visual">
-                    <div class="team-avatar avatar-boy"></div>
+                    <img src="img/Man.jpeg" alt="Álvarez Talla Isaí Daniel" class="team-avatar">
                     <h4 class="team-name">Álvarez Talla Isaí Daniel</h4>
                     <p class="team-role">Edición y desarrollo del sitio.</p>
                 </div>
                 <!-- Miembro 5 -->
                 <div class="team-card-visual">
-                    <div class="team-avatar avatar-girl girl-4"></div>
+                    <img src="img/F4.jpeg" alt="Castillo Lopez Leidy Geraldine" class="team-avatar">
                     <h4 class="team-name">Castillo Lopez Leidy Geraldine</h4>
                     <p class="team-role">Investigación y contenidos.</p>
                 </div>
                 <!-- Miembro 6 -->
                 <div class="team-card-visual">
-                    <div class="team-avatar avatar-girl girl-5"></div>
+                    <img src="img/F3.jpeg" alt="Grecia Samantha Yman Vilchez" class="team-avatar">
                     <h4 class="team-name">Grecia Samantha Yman Vilchez</h4>
                     <p class="team-role">Edición y desarrollo del sitio.</p>
                 </div>
                 <!-- Miembro 7 -->
                 <div class="team-card-visual">
-                    <div class="team-avatar avatar-girl girl-6"></div>
+                    <img src="img/F6.jpeg" alt="Cervantes Arcos Yesire Alejandra" class="team-avatar">
                     <h4 class="team-name">Cervantes Arcos Yesire Alejandra</h4>
                     <p class="team-role">Apoyo en redacción y propuesta visual.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Redes Sociales Bento -->
-        <section id="redes" class="section-container container" style="margin-top: 60px;">
-            <div class="bento-grid social-grid fade-up">
-                <!-- Red 1 -->
-                <a href="https://www.tiktok.com/@enfermeria_educa7?_r=1&_t=ZS-9576a8ONC0S" target="_blank"
-                    rel="noopener noreferrer" class="social-bento tiktok">
-                    <div class="social-icon">
-                        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                            <path
-                                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3>TikTok Oficial</h3>
-                        <p>Micro-aprendizaje visual para enfermería.</p>
-                    </div>
-                    <div class="social-arrow">→</div>
-                </a>
+        <!-- Sección Comunidad: Redes y Apoyo (QR) -->
+        <section id="comunidad" class="section-container container" style="margin-top: 80px;">
+            <div class="comunidad-layout fade-up">
 
-                <!-- Red 2 -->
-                <a href="https://whatsapp.com/channel/0029VbCB3ye0LKZHQ5l6R90v" target="_blank"
-                    rel="noopener noreferrer" class="social-bento whatsapp">
-                    <div class="social-icon">
-                        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                            <path
-                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
-                        </svg>
+                <!-- Columna Izquierda: Apoyo -->
+                <div class="comunidad-support">
+                    <article class="support-minimal-card">
+                        <span class="support-alert">Apoya el proyecto</span>
+                        <div class="support-qr-box">
+                            <img src="img/QR.jpeg" alt="Código QR Yape" loading="lazy">
+                        </div>
+                        <div class="support-text">
+                            <p>Tu aporte voluntario nos permite mantener la plataforma gratuita y actualizada.</p>
+                            <span class="support-pill">Escanea para donar</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Columna Derecha: Redes -->
+                <div class="comunidad-socials">
+                    <div class="social-title-box">
+                        <h3>Conéctate con nosotros</h3>
+                        <p>Síguenos para más contenido educativo diario.</p>
                     </div>
-                    <div>
-                        <h3>Novedades WhatsApp</h3>
-                        <p>Únete a nuestro canal oficial.</p>
+
+                    <div class="social-stack">
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@enfermeria_educa7?_r=1&_t=ZS-9576a8ONC0S" target="_blank"
+                            rel="noopener noreferrer" class="social-minimal-item tiktok">
+                            <div class="social-minimal-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                                </svg>
+                            </div>
+                            <div class="social-minimal-info">
+                                <strong>TikTok Oficial</strong>
+                                <span>Micro-aprendizaje visual</span>
+                            </div>
+                            <div class="social-minimal-arrow">→</div>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/enfermeria.educa7?igsh=MXg3OWI0Zjg5N2Uydg==" target="_blank"
+                            rel="noopener noreferrer" class="social-minimal-item instagram">
+                            <div class="social-minimal-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </div>
+                            <div class="social-minimal-info">
+                                <strong>Instagram</strong>
+                                <span>Galería de infografías</span>
+                            </div>
+                            <div class="social-minimal-arrow">→</div>
+                        </a>
                     </div>
-                    <div class="social-arrow">→</div>
-                </a>
+                </div>
+
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
@@ -676,6 +707,21 @@
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
         </svg>
     </button>
+
+    <!-- Global Topic Modal -->
+    <div id="globalTopicModal" class="topic-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="topic-modal-content">
+            <button id="closeTopicModal" class="topic-modal-close" aria-label="Cerrar modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div id="topicModalBody" class="topic-modal-body">
+                <!-- Content gets injected here -->
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts Premium -->
     <script src="js/main.js" defer></script>
