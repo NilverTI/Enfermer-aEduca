@@ -129,7 +129,7 @@ svg {
 
 @media (max-width: 600px) {
   .container {
-    padding: 0 28px;
+    padding: 0 32px;
   }
 }
 
@@ -793,6 +793,37 @@ svg {
   color: hsl(var(--c-primary));
   flex-shrink: 0;
   box-shadow: inset 0 0 0 1px hsl(var(--c-border));
+}
+
+.project-tag {
+  color: hsl(var(--c-primary));
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.project-title {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: hsl(var(--c-dark));
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.project-accent {
+  color: hsl(var(--c-primary-dark));
+}
+
+.project-description {
+  font-size: 1.15rem;
+  color: hsl(var(--c-text-muted));
+  line-height: 1.65;
+  max-width: 500px;
 }
 
 .min-feature-text h4 {
@@ -1509,10 +1540,21 @@ svg {
   .project-minimal-layout {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 0 10px;
+  }
+
+  .project-minimal-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .project-minimal-header h2 {
+    font-size: 2.2rem !important;
   }
 
   .project-minimal-header p {
     margin: 0 auto 24px;
+    max-width: 480px;
   }
 
   .min-feature {
@@ -1520,6 +1562,18 @@ svg {
     align-items: center;
     text-align: center;
     gap: 16px;
+  }
+
+  .min-feature-text p {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
   }
 
   .bot-panel {
