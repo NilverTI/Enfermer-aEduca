@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enfermería Educa - Plataforma educativa con contenidos de salud útiles, claros y accesibles.">
+    <!-- Meta Theme Color for mobile browsers -->
+    <meta name="theme-color" content="#f0f7ff">
+    <title>Enfermería Educa | Educación en Salud</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Premium Fonts: Outfit (Headings) & Inter (Body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <!-- Navigation (Glassmorphism effect) -->
+    <nav class="nav" aria-label="Navegación principal">
+        <div class="container nav-wrap">
+            <a href="#" class="brand" aria-label="Ir al inicio de Enfermería Educa">
+                <div class="brand-mark">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                </div>
+                <span>Grupo 1</span>
+            </a>
+            <div class="nav-links" role="menubar">
+                <a href="#proyecto" role="menuitem">Proyecto</a>
+                <a href="#contenido" role="menuitem">Contenido</a>
+                <a href="#equipo" role="menuitem">Equipo</a>
+                <a href="#donaciones" role="menuitem">Apoyo</a>
+            </div>
+            <!-- Botón de acción para el CTA de la barra -->
+            <div class="nav-cta">
+                <a href="#redes" class="btn-sm" aria-label="Ver nuestras redes">Conectar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Premium Layout) -->
+    <header class="hero">
+        <div class="container hero-wrap">
+            <div class="hero-content fade-up">
+                <div class="badge">
+                    <span class="badge-dot"></span> Proyecto Académico · Grupo 1
+                </div>
+                <h1 class="hero-title">Enfermería<br><span class="text-gradient">Educa</span></h1>
+                <p class="hero-subtitle">
+                    Plataforma orientada a la comunidad comunitaria y estudiantil. Fortalecemos el aprendizaje, la prevención y el cuidado responsable de la salud con contenido claro, riguroso y accesible.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#contenido">Explorar Temas</a>
+                    <a class="btn btn-secondary" href="#donaciones">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        Apoyar Iniciativa
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual fade-up" style="animation-delay: 0.1s;">
+                <div class="visual-card">
+                    <img src="img/logo-panel.png" alt="Ilustración representativa de Enfermería Educa" loading="lazy" class="floating-img">
+                    <!-- Decoración flotante -->
+                    <div class="glass-pill top-right">Conocimiento 📚</div>
+                    <div class="glass-pill bottom-left">Prevención 🩺</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Bento Box Section: Proyecto y Equipo -->
+        <section id="proyecto" class="section-container container">
+            <div class="section-header fade-up">
+                <h2>El Proyecto</h2>
+                <p>Nuestra visión para democratizar la salud en la comunidad.</p>
+            </div>
+
+            <!-- Grid Bento -->
+            <div class="bento-grid fade-up" style="animation-delay: 0.15s;">
+                
+                <!-- Bento Item 1: Visión General (Grande) -->
+                <article class="bento-card col-span-2 bento-primary">
+                    <div class="bento-content">
+                        <h3>Visión General</h3>
+                        <p class="bento-text">
+                            "Enfermería Educa" busca democratizar el conocimiento en salud traduciendo conceptos técnicos a un lenguaje aplicable a la vida diaria.
+                        </p>
+                        <div class="mission-grid">
+                            <div class="mission-item">
+                                <div class="icon-box">🎯</div>
+                                <div>
+                                    <strong>Misión</strong>
+                                    <span>Promover autocuidado preventivo.</span>
+                                </div>
+                            </div>
+                            <div class="mission-item">
+                                <div class="icon-box">🚀</div>
+                                <div>
+                                    <strong>Objetivo</strong>
+                                    <span>Reducir brechas de información.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Bento Item 3: Apoyo (QR) -->
+                <article id="donaciones" class="bento-card bento-accent">
+                    <div class="bento-content donacion-content">
+                        <img src="img/QR.jpeg" alt="Código QR Yape" class="real-qr" loading="lazy">
+                        <h3>Apoya el Proyecto</h3>
+                        <p>Mejora nuestra plataforma con tu aporte.</p>
+                        <div class="yape-pill">Yape: 987 654 321</div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Nuestro Equipo (Card Layout Style referenciado de la imagen) -->
+        <section id="equipo" class="section-container container" style="background-color: #f8f6f2; border-radius: var(--rad-xl); padding: 48px 48px 64px; margin-top: 20px;">
+            <div class="section-header" style="text-align: left; margin-bottom: 40px; max-width: 600px;">
+                <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #1e293b; margin-bottom: 12px;">Nuestro equipo</h2>
+                <p style="color: #64748b; font-size: 1.05rem; line-height: 1.6; margin: 0;">En lugar de una lista simple de integrantes, esta sección presenta al equipo con mejor orden y presencia visual.</p>
+            </div>
+
+            <div class="team-grid-cards fade-up">
+                <!-- Miembro 1 -->
+                <div class="team-card-visual">
+                    <div class="team-avatar avatar-girl girl-1"></div>
+                    <h4 class="team-name">Aguilar Lopez Maryuri</h4>
+                    <p class="team-role">Investigación y contenidos.</p>
+                </div>
+                <!-- Miembro 2 -->
+                <div class="team-card-visual">
+                    <div class="team-avatar avatar-boy"></div>
+                    <h4 class="team-name">Andia Mendoza Elian</h4>
+                    <p class="team-role">Edición y desarrollo del sitio.</p>
+                </div>
+                <!-- Miembro 3 -->
+                <div class="team-card-visual">
+                    <div class="team-avatar avatar-girl girl-2"></div>
+                    <h4 class="team-name">Barrientos Arango Lizbeth</h4>
+                    <p class="team-role">Apoyo en redacción y propuesta visual.</p>
+                </div>
+                <!-- Miembro 4 -->
+                <div class="team-card-visual">
+                    <div class="team-avatar avatar-girl girl-3"></div>
+                    <h4 class="team-name">Caceres Soto Luz Marina</h4>
+                    <p class="team-role">Coordinación y revisión de contenidos.</p>
+                </div>
+                <!-- Miembro 5 -->
+                <div class="team-card-visual">
+                    <div class="team-avatar avatar-girl girl-4"></div>
+                    <h4 class="team-name">Castilla Mejia Carmen</h4>
+                    <p class="team-role">Investigación y contenidos.</p>
+                </div>
+                <!-- Miembro 6 -->
+                <div class="team-card-visual">
+                    <div class="team-avatar avatar-girl girl-5"></div>
+                    <h4 class="team-name">Chira Tueros Thalia</h4>
+                    <p class="team-role">Edición y desarrollo del sitio.</p>
+                </div>
+                <!-- Miembro 7 -->
+                <div class="team-card-visual">
+                    <div class="team-avatar avatar-girl girl-6"></div>
+                    <h4 class="team-name">Contreras Castro Rosario</h4>
+                    <p class="team-role">Apoyo en redacción y propuesta visual.</p>
+                </div>
+                <!-- Miembro 8 -->
+                <div class="team-card-visual">
+                    <div class="team-avatar avatar-girl girl-1"></div>
+                    <h4 class="team-name">Damaso Galarza Judith</h4>
+                    <p class="team-role">Coordinación y revisión de contenidos.</p>
+                </div>
+                <!-- Miembro 9 -->
+                <div class="team-card-visual">
+                    <div class="team-avatar avatar-girl girl-2"></div>
+                    <h4 class="team-name">Delgado Morales Sheyla</h4>
+                    <p class="team-role">Investigación y contenidos.</p>
+                </div>
+                <!-- Miembro 10 -->
+                <div class="team-card-visual">
+                    <div class="team-avatar avatar-girl girl-3"></div>
+                    <h4 class="team-name">Dueñas Morales Deisy</h4>
+                    <p class="team-role">Edición y desarrollo del sitio.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ejes Temáticos -->
+        <section id="contenido" class="section-container container" style="margin-top: 60px;">
+            <div class="section-header fade-up">
+                <h2>Ejes Temáticos</h2>
+                <p>Contenido estructurado para un aprendizaje progresivo en cuidado integral.</p>
+            </div>
+            
+            <div class="accordion-container fade-up" style="animation-delay: 0.1s;">
+                <!-- Topic 1 -->
+                <details class="premium-accordion" name="ejes">
+                    <summary class="accordion-trigger">
+                        <div class="acc-info">
+                            <span class="acc-num">01</span>
+                            <div>
+                                <h3 class="acc-title">Rol del Profesional de Enfermería</h3>
+                                <p class="acc-desc">Importancia y funciones en el sistema de salud.</p>
+                            </div>
+                        </div>
+                        <div class="acc-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="acc-inner">
+                            <h4>Pilares de la Atención:</h4>
+                            <ul class="feature-list">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6 9 17l-5-5"/></svg> Funciones asistenciales y preventivas.</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6 9 17l-5-5"/></svg> Ética y cuidado humanizado integral.</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6 9 17l-5-5"/></svg> Impacto directo en la recuperación del paciente.</li>
+                            </ul>
+                            <div class="reference-badge">Ref: OMS - Liderazgo en Enfermería.</div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Topic 2 -->
+                <details class="premium-accordion" name="ejes">
+                    <summary class="accordion-trigger">
+                        <div class="acc-info">
+                            <span class="acc-num">02</span>
+                            <div>
+                                <h3 class="acc-title">Primeros Auxilios y Emergencias</h3>
+                                <p class="acc-desc">Guías vitales para actuar en crisis del día a día.</p>
+                            </div>
+                        </div>
+                        <div class="acc-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="acc-inner">
+                            <h4>Protocolos Iniciales:</h4>
+                            <ul class="feature-list">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6 9 17l-5-5"/></svg> Manejo de atragantamientos (Heimlich).</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6 9 17l-5-5"/></svg> Tratamiento inicial de quemaduras y heridas severas.</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6 9 17l-5-5"/></svg> Técnicas de reconocimiento de signos vitales.</li>
+                            </ul>
+                            <div class="reference-badge">Ref: Manual de Primeros Auxilios - Cruz Roja.</div>
+                        </div>
+                    </div>
+                </details>
+                
+                <!-- Topic 3 -->
+                <details class="premium-accordion" name="ejes">
+                    <summary class="accordion-trigger">
+                        <div class="acc-info">
+                            <span class="acc-num">03</span>
+                            <div>
+                                <h3 class="acc-title">Prevención de Enfermedades Comunes</h3>
+                                <p class="acc-desc">Pautas clave contra patologías estacionales y crónicas.</p>
+                            </div>
+                        </div>
+                        <div class="acc-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="acc-inner">
+                            <h4>Medidas Fundamentales:</h4>
+                            <ul class="feature-list">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6 9 17l-5-5"/></svg> Higiene de manos y etiqueta respiratoria correcta.</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6 9 17l-5-5"/></svg> Alimentación e hidratación enfocada en defensas.</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6 9 17l-5-5"/></svg> El gran valor de los monitoreos médicos periódicos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Redes Sociales Bento -->
+        <section id="redes" class="section-container container" style="margin-top: 60px;">
+            <div class="bento-grid social-grid fade-up">
+                <!-- Red 1 -->
+                <a href="https://www.tiktok.com/@enfermeria_educa7?_r=1&_t=ZS-9576a8ONC0S" target="_blank" rel="noopener noreferrer" class="social-bento tiktok">
+                    <div class="social-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                    </div>
+                    <div>
+                        <h3>TikTok Oficial</h3>
+                        <p>Micro-aprendizaje visual para enfermería.</p>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+
+                <!-- Red 2 -->
+                <a href="https://whatsapp.com/channel/0029VbCB3ye0LKZHQ5l6R90v" target="_blank" rel="noopener noreferrer" class="social-bento whatsapp">
+                    <div class="social-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Novedades WhatsApp</h3>
+                        <p>Únete a nuestro canal oficial.</p>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-wrap">
+            <div class="footer-brand">Enfermería Educa</div>
+            <p>Educación en salud para todos, con el compromiso de la excelencia académica.</p>
+            
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/enfermeria.educa7?igsh=MXg3OWI0Zjg5N2Uydg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://www.tiktok.com/@enfermeria_educa7?_r=1&_t=ZS-958P6heTlXZ" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbCB3ye0LKZHQ5l6R90v" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 Grupo 1 - Plataforma Educativa.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Panel Flotante Bot de WhatsApp (Glassmorphism) -->
+    <div class="bot-panel" id="botPanel" role="dialog" aria-labelledby="botDialogTitle" aria-hidden="true">
+        <div class="bot-header">
+            <h4 id="botDialogTitle">Comunidad en WhatsApp</h4>
+            <button class="bot-close" id="botClose" aria-label="Cerrar panel de WhatsApp">✕</button>
+        </div>
+        <p>Recibe noticias, infografías y avances del proyecto directamente en tu celular.</p>
+        <a href="https://whatsapp.com/channel/0029VbCB3ye0LKZHQ5l6R90v" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            Suscribirse al canal
+        </a>
+    </div>
+    
+    <!-- Botón Flotante interactivo -->
+    <button class="bot-float" id="botBtn" aria-expanded="false" aria-controls="botPanel" aria-label="Abrir panel de la comunidad en WhatsApp">
+        <div class="bot-pulse"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </button>
+
+    <!-- Scripts Premium -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
