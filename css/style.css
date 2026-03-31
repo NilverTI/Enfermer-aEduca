@@ -45,9 +45,9 @@
   --rad-full: 9999px;
 
   /* Fluid Typography (clamp) */
-  --fs-h1: clamp(2.5rem, 8vw, 4rem);
-  --fs-h2: clamp(1.8rem, 6vw, 2.8rem);
-  --fs-h3: clamp(1.4rem, 4vw, 1.8rem);
+  --fs-h1: clamp(2rem, 8vw, 4rem);
+  --fs-h2: clamp(1.6rem, 6vw, 2.8rem);
+  --fs-h3: clamp(1.2rem, 4vw, 1.8rem);
   --fs-body: clamp(0.95rem, 2vw, 1.05rem);
 
   /* Transitions */
@@ -83,6 +83,7 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -128,7 +129,7 @@ svg {
 
 @media (max-width: 600px) {
   .container {
-    padding: 0 16px;
+    padding: 0 28px;
   }
 }
 
@@ -1534,17 +1535,40 @@ svg {
 
 /* --- Small Mobile (600px - 480px) --- */
 @media (max-width: 600px) {
+  .brand {
+    font-size: 1.1rem;
+    gap: 8px;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-wrap {
+    height: 70px;
+  }
+
   .team-grid-cards {
     grid-template-columns: 1fr;
+    padding: 0 8px; /* Extra breathing room inside already padded container */
+  }
+
+  .team-section {
+    padding: 40px 20px;
   }
 
   .support-minimal-card {
-    padding: 40px 24px;
+    padding: 40px 20px;
   }
 
   .support-qr-box img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .footer-wrap {
+    padding: 0 40px;
   }
 
   .section-container {
@@ -1552,6 +1576,6 @@ svg {
   }
 
   .modal-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
