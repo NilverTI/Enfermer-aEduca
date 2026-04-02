@@ -65,8 +65,13 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800;900&display=swap"
         rel="stylesheet">
 
-    <!-- External CSS -->
+    <!-- External CSS (Consolidated) -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/proyecto.css">
+    <link rel="stylesheet" href="css/contenido.css">
+    <link rel="stylesheet" href="css/equipo.css">
+    <link rel="stylesheet" href="css/apoyo.css">
+    <link rel="stylesheet" href="css/impacto.css">
 
     <!-- Favicon & Mobile Icons -->
     <link rel="icon" type="image/x-icon" href="img/favi.ico">
@@ -93,6 +98,7 @@
                 <a href="#contenido" role="menuitem">Contenido</a>
                 <a href="#equipo" role="menuitem">Equipo</a>
                 <a href="#comunidad" role="menuitem">Apoyo</a>
+                <a href="html/libros.html" role="menuitem">Libros</a>
             </div>
 
             <!-- Botón de acción para el CTA de la barra -->
@@ -148,10 +154,9 @@
     </header>
 
     <main>
-        <!-- Sección de Proyecto Minimalista -->
+        <!-- Sección 1: El Proyecto -->
         <section id="proyecto" class="section-container container" style="margin-top: 30px;">
             <div class="project-minimal-layout fade-up">
-
                 <div class="project-minimal-header">
                     <span class="project-tag">El Proyecto</span>
                     <h2 class="project-title">
@@ -165,11 +170,9 @@
                         de la salud.
                     </p>
                 </div>
-
                 <div class="project-minimal-features">
                     <div class="min-feature">
                         <div class="min-icon-wrapper">
-                            <!-- Icono de Objetivo -->
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="12" r="10"></circle>
@@ -185,10 +188,8 @@
                                 autocuidado directo y la prevención responsable de enfermedades.</p>
                         </div>
                     </div>
-
                     <div class="min-feature">
                         <div class="min-icon-wrapper">
-                            <!-- Icono de Comunidad -->
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -204,428 +205,219 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-        <!-- Ejes Temáticos -->
-        <section id="contenido" class="section-container container" style="margin-top: 60px;">
+
+        <!-- Sección 2: Contenido Principal -->
+        <section id="contenido" class="section-container container section-mt-md">
             <div class="section-header fade-up">
                 <h2>Contenido principal</h2>
                 <p>En cada tema encontrarás una explicación breve. Al hacer clic, se abrirá la información ampliada con
                     recomendaciones y referencia.</p>
             </div>
-
-            <div class="topics-grid fade-up" style="animation-delay: 0.1s;">
+            <div class="topics-grid">
                 <!-- Topic 1 -->
-                <article class="topic-card" tabindex="0" role="button" aria-expanded="false">
-                    <div class="topic-card-header">
-                        <span class="acc-num">01</span>
-                    </div>
+                <article class="topic-card fade-up" style="animation-delay: 0.1s;" tabindex="0" role="button"
+                    aria-expanded="false">
+                    <div class="topic-card-header"><span class="acc-num">01</span></div>
                     <div class="topic-card-body">
                         <h3 class="acc-title">🫀 CONTROL DE LA PRESIÓN ARTERIAL</h3>
                         <p class="acc-desc">Mantener la presión arterial controlada es fundamental para prevenir
                             enfermedades del corazón, derrames cerebrales y problemas renales.</p>
                     </div>
-                    <div class="topic-card-footer">
-                        <span class="view-more">Ver detalles →</span>
-                    </div>
-
-                    <!-- Contenido Secreto (Modal) -->
+                    <div class="topic-card-footer"><span class="view-more">Ver detalles →</span></div>
                     <div class="topic-hidden-content" style="display: none;">
                         <h2 class="modal-title">🫀 CONTROL DE LA PRESIÓN ARTERIAL</h2>
                         <div class="acc-inner">
                             <h4>Información completa</h4>
                             <p>La presión arterial es la fuerza que ejerce la sangre contra las arterias, y cuando se
                                 eleva constantemente puede volverse peligrosa sin presentar síntomas.</p>
-                            <p>La presión arterial se mide en dos valores:</p>
                             <ul class="feature-list">
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
+                                <li><svg class="icon-check">
+                                        <use href="#icon-check"></use>
                                     </svg> <strong>Sistólica:</strong> cuando el corazón late.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
+                                <li><svg class="icon-check">
+                                        <use href="#icon-check"></use>
                                     </svg> <strong>Diastólica:</strong> cuando el corazón descansa.</li>
                             </ul>
-                            <p>Para controlarla adecuadamente:</p>
-                            <ul class="feature-list">
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Reducir el consumo de sal.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Evitar alimentos procesados.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Realizar actividad física diaria (30 minutos).</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Mantener un peso saludable.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Evitar alcohol y tabaco.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Controlar el estrés.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Medir la presión regularmente.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Seguir el tratamiento médico indicado.</li>
-                            </ul>
-                            <p><strong>Importante:</strong> la hipertensión es una enfermedad silenciosa, por eso el
-                                control constante es clave.</p>
-                            <div class="reference-badge">Ref APA 7: Organización Mundial de la Salud. (2021).
-                                Hipertensión. https://www.who.int/es/news-room/fact-sheets/detail/hypertension</div>
+                            <div class="reference-badge">Ref APA 7: OMS (2021). Hipertensión.
+                                https://www.who.int/es/news-room/fact-sheets/detail/hypertension</div>
                         </div>
                     </div>
                 </article>
-
                 <!-- Topic 2 -->
-                <article class="topic-card" tabindex="0" role="button" aria-expanded="false">
-                    <div class="topic-card-header">
-                        <span class="acc-num">02</span>
-                    </div>
+                <article class="topic-card fade-up" style="animation-delay: 0.2s;" tabindex="0" role="button"
+                    aria-expanded="false">
+                    <div class="topic-card-header"><span class="acc-num">02</span></div>
                     <div class="topic-card-body">
                         <h3 class="acc-title">🥗 ALIMENTACIÓN SALUDABLE</h3>
                         <p class="acc-desc">Una alimentación saludable ayuda a mantener el cuerpo fuerte y prevenir
                             enfermedades como diabetes, obesidad y problemas cardíacos.</p>
                     </div>
-                    <div class="topic-card-footer">
-                        <span class="view-more">Ver detalles →</span>
-                    </div>
+                    <div class="topic-card-footer"><span class="view-more">Ver detalles →</span></div>
                     <div class="topic-hidden-content" style="display: none;">
                         <h2 class="modal-title">🥗 ALIMENTACIÓN SALUDABLE</h2>
                         <div class="acc-inner">
                             <h4>Información completa</h4>
                             <p>Se basa en consumir alimentos naturales y equilibrados.</p>
-                            <p>Para una buena alimentación:</p>
                             <ul class="feature-list">
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
+                                <li><svg class="icon-check">
+                                        <use href="#icon-check"></use>
                                     </svg> Consumir frutas y verduras diariamente.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Incluir proteínas como pollo, pescado y huevo.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Preferir cereales integrales.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Reducir grasas saturadas y frituras.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Evitar el exceso de azúcar y sal.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
+                                <li><svg class="icon-check">
+                                        <use href="#icon-check"></use>
                                     </svg> Beber entre 6 y 8 vasos de agua al día.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Mantener horarios de comida.</li>
                             </ul>
-                            <p>Beneficios:</p>
-                            <ul class="feature-list">
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Mejora el sistema inmunológico.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Aumenta la energía.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Previene enfermedades.</li>
-                            </ul>
-                            <div class="reference-badge">Ref APA 7: Organización Mundial de la Salud. (2020). Dieta
-                                saludable. https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet</div>
+                            <div class="reference-badge">Ref APA 7: OMS (2020). Dieta saludable.
+                                https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet</div>
                         </div>
                     </div>
                 </article>
-
                 <!-- Topic 3 -->
-                <article class="topic-card" tabindex="0" role="button" aria-expanded="false">
-                    <div class="topic-card-header">
-                        <span class="acc-num">03</span>
-                    </div>
+                <article class="topic-card fade-up" style="animation-delay: 0.3s;" tabindex="0" role="button"
+                    aria-expanded="false">
+                    <div class="topic-card-header"><span class="acc-num">03</span></div>
                     <div class="topic-card-body">
                         <h3 class="acc-title">💊 USO CORRECTO DE MEDICAMENTOS</h3>
                         <p class="acc-desc">El uso adecuado de medicamentos permite tratar enfermedades de forma segura
-                            y eficaz. Un mal uso puede provocar complicaciones.</p>
+                            y eficaz.</p>
                     </div>
-                    <div class="topic-card-footer">
-                        <span class="view-more">Ver detalles →</span>
-                    </div>
+                    <div class="topic-card-footer"><span class="view-more">Ver detalles →</span></div>
                     <div class="topic-hidden-content" style="display: none;">
                         <h2 class="modal-title">💊 USO CORRECTO DE MEDICAMENTOS</h2>
                         <div class="acc-inner">
                             <h4>Información completa</h4>
-                            <p>Para un uso correcto:</p>
                             <ul class="feature-list">
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
+                                <li><svg class="icon-check">
+                                        <use href="#icon-check"></use>
                                     </svg> Tomar medicamentos a la hora indicada.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Respetar la dosis prescrita.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
+                                <li><svg class="icon-check">
+                                        <use href="#icon-check"></use>
                                     </svg> No automedicarse.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> No suspender el tratamiento sin indicación médica.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> No compartir medicamentos.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Leer las etiquetas e instrucciones.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Guardarlos en lugares seguros.</li>
                             </ul>
-                            <p><strong>Regla importante (5 correctos):</strong></p>
-                            <ul class="feature-list">
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Paciente correcto.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Medicamento correcto.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Dosis correcta.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Vía correcta.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Hora correcta.</li>
-                            </ul>
-                            <div class="reference-badge">Ref APA 7: MedlinePlus. (2022). Seguridad con los medicamentos.
-                                https://medlineplus.gov/spanish/medicinesafety.html</div>
+                            <div class="reference-badge">Ref APA 7: MedlinePlus (2022). Seguridad con medicamentos.
+                            </div>
                         </div>
                     </div>
                 </article>
-
                 <!-- Topic 4 -->
-                <article class="topic-card" tabindex="0" role="button" aria-expanded="false">
-                    <div class="topic-card-header">
-                        <span class="acc-num">04</span>
-                    </div>
+                <article class="topic-card fade-up" style="animation-delay: 0.4s;" tabindex="0" role="button"
+                    aria-expanded="false">
+                    <div class="topic-card-header"><span class="acc-num">04</span></div>
                     <div class="topic-card-body">
                         <h3 class="acc-title">🚑 PRIMEROS AUXILIOS</h3>
-                        <p class="acc-desc">Los primeros auxilios son acciones inmediatas que se realizan en una
-                            emergencia para ayudar a una persona antes de que llegue atención médica.</p>
+                        <p class="acc-desc">Acciones inmediatas en una emergencia para ayudar a una persona antes de la
+                            atención médica.</p>
                     </div>
-                    <div class="topic-card-footer">
-                        <span class="view-more">Ver detalles →</span>
-                    </div>
+                    <div class="topic-card-footer"><span class="view-more">Ver detalles →</span></div>
                     <div class="topic-hidden-content" style="display: none;">
                         <h2 class="modal-title">🚑 PRIMEROS AUXILIOS</h2>
                         <div class="acc-inner">
                             <h4>Información completa</h4>
-                            <p>Acciones básicas:</p>
                             <ul class="feature-list">
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
+                                <li><svg class="icon-check">
+                                        <use href="#icon-check"></use>
                                     </svg> Mantener la calma.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Evaluar la situación.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Verificar respiración y pulso.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
+                                <li><svg class="icon-check">
+                                        <use href="#icon-check"></use>
                                     </svg> Llamar a emergencias.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Controlar hemorragias.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Limpiar y cubrir heridas.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> No mover a la persona si hay fracturas.</li>
                             </ul>
-                            <p>En casos graves:</p>
-                            <ul class="feature-list">
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Aplicar RCP si se sabe realizar.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Colocar en posición de seguridad.</li>
-                            </ul>
-                            <div class="reference-badge">Ref APA 7: Cruz Roja Española. (2020). Primeros auxilios.
-                                https://www.cruzroja.es/principal/web/guest/primeros-auxilios</div>
+                            <div class="reference-badge">Ref APA 7: Cruz Roja (2020).</div>
                         </div>
                     </div>
                 </article>
-
                 <!-- Topic 5 -->
-                <article class="topic-card" tabindex="0" role="button" aria-expanded="false">
-                    <div class="topic-card-header">
-                        <span class="acc-num">05</span>
-                    </div>
+                <article class="topic-card fade-up" style="animation-delay: 0.5s;" tabindex="0" role="button"
+                    aria-expanded="false">
+                    <div class="topic-card-header"><span class="acc-num">05</span></div>
                     <div class="topic-card-body">
                         <h3 class="acc-title">👵 CUIDADO DEL ADULTO MAYOR</h3>
-                        <p class="acc-desc">El cuidado del adulto mayor busca mantener su bienestar físico, emocional y
-                            social, mejorando su calidad de vida.</p>
+                        <p class="acc-desc">Busca mantener su bienestar físico, emocional y social, mejorando su calidad
+                            de vida.</p>
                     </div>
-                    <div class="topic-card-footer">
-                        <span class="view-more">Ver detalles →</span>
-                    </div>
+                    <div class="topic-card-footer"><span class="view-more">Ver detalles →</span></div>
                     <div class="topic-hidden-content" style="display: none;">
                         <h2 class="modal-title">👵 CUIDADO DEL ADULTO MAYOR</h2>
                         <div class="acc-inner">
                             <h4>Información completa</h4>
-                            <p>Cuidados importantes:</p>
                             <ul class="feature-list">
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
+                                <li><svg class="icon-check">
+                                        <use href="#icon-check"></use>
                                     </svg> Alimentación balanceada.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Higiene diaria.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Control médico frecuente.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Uso adecuado de medicamentos.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Actividad física moderada.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
+                                <li><svg class="icon-check">
+                                        <use href="#icon-check"></use>
                                     </svg> Apoyo emocional.</li>
                             </ul>
-                            <p>Prevención:</p>
-                            <ul class="feature-list">
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Evitar caídas con espacios seguros.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Buena iluminación en casa.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Supervisión constante.</li>
-                            </ul>
-                            <div class="reference-badge">Ref APA 7: MedlinePlus. (2022). Salud del adulto mayor.
-                                https://medlineplus.gov/spanish/olderadulthealth.html</div>
+                            <div class="reference-badge">Ref APA 7: MedlinePlus (2022).</div>
                         </div>
                     </div>
                 </article>
-
                 <!-- Topic 6 -->
-                <article class="topic-card" tabindex="0" role="button" aria-expanded="false">
-                    <div class="topic-card-header">
-                        <span class="acc-num">06</span>
-                    </div>
+                <article class="topic-card fade-up" style="animation-delay: 0.6s;" tabindex="0" role="button"
+                    aria-expanded="false">
+                    <div class="topic-card-header"><span class="acc-num">06</span></div>
                     <div class="topic-card-body">
                         <h3 class="acc-title">🛡 PREVENCIÓN DE ENFERMEDADES</h3>
                         <p class="acc-desc">La prevención es clave para evitar enfermedades y mantener una vida
                             saludable.</p>
                     </div>
-                    <div class="topic-card-footer">
-                        <span class="view-more">Ver detalles →</span>
-                    </div>
+                    <div class="topic-card-footer"><span class="view-more">Ver detalles →</span></div>
                     <div class="topic-hidden-content" style="display: none;">
                         <h2 class="modal-title">🛡 PREVENCIÓN DE ENFERMEDADES</h2>
                         <div class="acc-inner">
                             <h4>Información completa</h4>
-                            <p>Medidas principales:</p>
                             <ul class="feature-list">
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
+                                <li><svg class="icon-check">
+                                        <use href="#icon-check"></use>
                                     </svg> Lavado frecuente de manos.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
+                                <li><svg class="icon-check">
+                                        <use href="#icon-check"></use>
                                     </svg> Vacunación completa.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Alimentación saludable.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Ejercicio regular.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Evitar tabaco y alcohol.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Realizar chequeos médicos.</li>
                             </ul>
-                            <p>Beneficios:</p>
-                            <ul class="feature-list">
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Detectar enfermedades a tiempo.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Reducir riesgos.</li>
-                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M20 6 9 17l-5-5" />
-                                    </svg> Mejorar calidad de vida.</li>
-                            </ul>
-                            <div class="reference-badge">Ref APA 7: Organización Mundial de la Salud. (2022). Prevención
-                                de enfermedades. https://www.who.int/es</div>
+                            <div class="reference-badge">Ref APA 7: OMS (2022).</div>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- Nuestro Equipo (Card Layout Style referenciado de la imagen) -->
+        <!-- Sección 3: Equipo -->
         <section id="equipo" class="section-container container team-section">
-            <div class="section-header" style="text-align: left; margin-bottom: 40px; max-width: 600px;">
-                <h2
-                    style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #1e293b; margin-bottom: 12px;">
-                    Nuestro equipo</h2>
-                <!--  <p style="color: #64748b; font-size: 1.05rem; line-height: 1.6; margin: 0;">
-                    En lugar de una lista simple
-                    de integrantes, esta sección presenta al equipo con mejor orden y presencia visual.</p>   -->
+            <div class="team-header">
+                <h2>Nuestro equipo</h2>
             </div>
-
-            <div class="team-grid-cards fade-up">
-                <!-- Miembro 1 -->
-                <div class="team-card-visual">
+            <div class="team-grid-cards">
+                <div class="team-card-visual fade-up" style="animation-delay: 0.1s;">
                     <img src="img/F1.jpeg" alt="Mauricio Salvador Noemi Analy" class="team-avatar">
                     <h4 class="team-name">Mauricio Salvador Noemi Analy</h4>
                     <p class="team-role">Coordinación general</p>
                 </div>
-                <!-- Miembro 2 -->
-                <div class="team-card-visual">
+                <div class="team-card-visual fade-up" style="animation-delay: 0.2s;">
                     <img src="img/F2.jpeg" alt="Ventura Henostroza Ana Paula" class="team-avatar">
                     <h4 class="team-name">Ventura Henostroza Ana Paula</h4>
                     <p class="team-role">Contenido</p>
                 </div>
-                <!-- Miembro 3 -->
-                <div class="team-card-visual">
+                <div class="team-card-visual fade-up" style="animation-delay: 0.3s;">
                     <img src="img/F5.jpeg" alt="Castillo Castro Greace Stephanie" class="team-avatar">
                     <h4 class="team-name">Castillo Castro Greace Stephanie</h4>
                     <p class="team-role">Redes sociales / Marketing</p>
                 </div>
-                <!-- Miembro 4 -->
-                <div class="team-card-visual">
+                <div class="team-card-visual fade-up" style="animation-delay: 0.4s;">
                     <img src="img/Man.jpeg" alt="Álvarez Talla Isaí Daniel" class="team-avatar">
                     <h4 class="team-name">Álvarez Talla Isaí Daniel</h4>
                     <p class="team-role">Redes sociales / Marketing</p>
                 </div>
-                <!-- Miembro 5 -->
-                <div class="team-card-visual">
+                <div class="team-card-visual fade-up" style="animation-delay: 0.5s;">
                     <img src="img/F4.jpeg" alt="Castillo Lopez Leidy Geraldine" class="team-avatar">
                     <h4 class="team-name">Castillo Lopez Leidy Geraldine</h4>
                     <p class="team-role">Contenido</p>
                 </div>
-                <!-- Miembro 6 -->
-                <div class="team-card-visual">
+                <div class="team-card-visual fade-up" style="animation-delay: 0.6s;">
                     <img src="img/F3.jpeg" alt="Grecia Samantha Yman Vilchez" class="team-avatar">
                     <h4 class="team-name">Grecia Samantha Yman Vilchez</h4>
                     <p class="team-role">Diseño</p>
                 </div>
-                <!-- Miembro 7 -->
-                <div class="team-card-visual">
+                <div class="team-card-visual fade-up" style="animation-delay: 0.7s;">
                     <img src="img/F6.jpeg" alt="Cervantes Arcos Yesire Alejandra" class="team-avatar">
                     <h4 class="team-name">Cervantes Arcos Yesire Alejandra</h4>
                     <p class="team-role">Diseño</p>
@@ -633,54 +425,39 @@
             </div>
         </section>
 
-        <!-- Sección Comunidad: Redes y Apoyo (QR) -->
-        <section id="comunidad" class="section-container container community-premium-box" style="margin-top: 80px;">
-            <div class="comunidad-layout fade-up">
-
-                <!-- Columna Izquierda: Apoyo -->
-                <div class="comunidad-support">
+        <!-- Sección 4: Comunidad (Apoyo) -->
+        <section id="comunidad" class="section-container container community-premium-box section-mt-lg">
+            <div class="comunidad-layout">
+                <div class="comunidad-support fade-up">
                     <article class="support-minimal-card">
-                        <span class="support-alert">Apoya el proyecto</span>
-                        <div class="support-qr-box">
-                            <img src="img/QR.jpeg" alt="Código QR Yape" loading="lazy">
-                        </div>
+                        <span class="support-alert">APOYA EL PROYECTO</span>
+                        <div class="support-qr-box"><img src="img/QR.jpeg" alt="Código QR Yape" loading="lazy"></div>
                         <div class="support-text">
                             <p>Tu aporte voluntario nos permite mantener la plataforma gratuita y actualizada.</p>
-                            <span class="support-pill">Escanea para donar</span>
+                            <span class="support-pill">ESCANEA PARA DONAR</span>
                         </div>
                     </article>
                 </div>
-
-                <!-- Columna Derecha: Redes -->
                 <div class="comunidad-socials">
-                    <div class="social-title-box">
-                        <span class="badge"
-                            style="margin-bottom: 12px; background: hsl(var(--c-primary) / 0.1); border-color: transparent; color: hsl(var(--c-primary-dark));">Únete
-                            a la comunidad</span>
+                    <div class="social-title-box fade-up" style="animation-delay: 0.1s;">
                         <h3 style="font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 16px;">Síguenos en Redes</h3>
                         <p style="margin-bottom: 32px;">Contenido confiable, fácil y accesible todos los días.</p>
                     </div>
-
                     <div class="social-stack-premium">
-                        <!-- TikTok -->
                         <a href="https://www.tiktok.com/@enfermeria_educa7?_r=1&_t=ZS-9576a8ONC0S" target="_blank"
-                            rel="noopener noreferrer" class="social-btn tiktok-premium">
+                            class="social-btn tiktok-premium fade-up" style="animation-delay: 0.2s;">
                             <div class="social-icon">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                                 </svg>
                             </div>
-                            <div class="social-info">
-                                <strong>TikTok Oficial</strong>
-                                <span>@enfermeria_educa7</span>
+                            <div class="social-info"><strong>TikTok Oficial</strong><span>@enfermeria_educa7</span>
                             </div>
                             <div class="social-arrow">Ver →</div>
                         </a>
-
-                        <!-- Instagram -->
                         <a href="https://www.instagram.com/enfermeria.educa7?igsh=MXg3OWI0Zjg5N2Uydg==" target="_blank"
-                            rel="noopener noreferrer" class="social-btn instagram-premium">
+                            class="social-btn instagram-premium fade-up" style="animation-delay: 0.3s;">
                             <div class="social-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round">
@@ -689,32 +466,25 @@
                                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                 </svg>
                             </div>
-                            <div class="social-info">
-                                <strong>Instagram</strong>
-                                <span>@enfermeria.educa7</span>
-                            </div>
+                            <div class="social-info"><strong>Instagram</strong><span>@enfermeria.educa7</span></div>
                             <div class="social-arrow">Ver →</div>
                         </a>
-
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- Sección de Impacto Final (Profesor Suggestion) -->
-        <section class="final-impact fade-up">
+        <!-- Sección 5: Impacto Final -->
+        <section class="final-impact-section fade-up">
             <div class="container impact-wrap">
                 <div class="impact-content">
-                    <h2 class="impact-text">“Enfermería Educa: conocimiento que puede <span class="highlight">salvar
+                    <h2 class="impact-text">“Enfermería Educa: conocimiento que puede <span class="text-gradient">salvar
                             vidas</span>.”</h2>
-                    <div class="impact-divider"></div>
                     <p class="impact-sub">Nuestro proyecto no solo informa, sino que busca prevenir enfermedades a
-                        través del aprendizaje.</p>
+                        través del aprendizaje constante y accesible.</p>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="footer">
@@ -766,9 +536,8 @@
         <p>Recibe noticias, infografías y avances del proyecto directamente en tu celular.</p>
         <a href="https://whatsapp.com/channel/0029VbCB3ye0LKZHQ5l6R90v" target="_blank" rel="noopener noreferrer"
             class="btn btn-whatsapp">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right: 8px;">
-                <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+            <svg viewBox="0 0 24 24" width="28" height="28">
+                <use href="#icon-whatsapp"></use>
             </svg>
             Únete para novedades
         </a>
@@ -778,9 +547,8 @@
     <button class="bot-float" id="botBtn" aria-expanded="false" aria-controls="botPanel"
         aria-label="Abrir panel de la comunidad en WhatsApp">
         <div class="bot-pulse"></div>
-        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        <svg viewBox="0 0 24 24" width="28" height="28">
+            <use href="#icon-whatsapp"></use>
         </svg>
     </button>
 
@@ -799,9 +567,21 @@
         </div>
     </div>
 
-    <!-- Scripts Premium -->
-    <script src="js/main.js" defer></script>
+    <!-- SVG Sprite (Global Icons) -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5" />
+        </symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </symbol>
+    </svg>
+
+    <!-- Scripts Premium (Direct linking) -->
+    <script src="js/contenido.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
-+

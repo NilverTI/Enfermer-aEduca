@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad y Apoyo - Enfermería Educa</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/apoyo.css">
+</head>
+<body>
+    <section id="comunidad" class="section-container container community-premium-box section-mt-lg">
+        <div class="comunidad-layout">
+
+            <!-- Columna Izquierda: Apoyo -->
+            <div class="comunidad-support fade-up">
+                <article class="support-minimal-card">
+                    <span class="support-alert">APOYA EL PROYECTO</span>
+                    <div class="support-qr-box">
+                        <img src="../img/QR.jpeg" alt="Código QR Yape" loading="lazy">
+                    </div>
+                    <div class="support-text">
+                        <p>Tu aporte voluntario nos permite mantener la plataforma gratuita y actualizada.</p>
+                        <span class="support-pill">ESCANEA PARA DONAR</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Columna Derecha: Redes -->
+            <div class="comunidad-socials">
+                <div class="social-title-box fade-up" style="animation-delay: 0.1s;">
+                    <h3 style="font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 16px;">Síguenos en Redes</h3>
+                    <p style="margin-bottom: 32px;">Contenido confiable, fácil y accesible todos los días.</p>
+                </div>
+
+                <div class="social-stack-premium">
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@enfermeria_educa7?_r=1&_t=ZS-9576a8ONC0S" target="_blank"
+                        rel="noopener noreferrer" class="social-btn tiktok-premium fade-up" style="animation-delay: 0.2s;">
+                        <div class="social-info">
+                            <strong>TikTok Oficial</strong>
+                            <span>@enfermeria_educa7</span>
+                        </div>
+                        <div class="social-arrow">Ver →</div>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/enfermeria.educa7?igsh=MXg3OWI0Zjg5N2Uydg==" target="_blank"
+                        rel="noopener noreferrer" class="social-btn instagram-premium fade-up" style="animation-delay: 0.3s;">
+                        <div class="social-info">
+                            <strong>Instagram</strong>
+                            <span>@enfermeria.educa7</span>
+                        </div>
+                        <div class="social-arrow">Ver →</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Base Animations JS (IntersectionObserver) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

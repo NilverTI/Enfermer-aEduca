@@ -1,0 +1,35 @@
+/* Impacto Final Section Styles */
+.final-impact-section {
+  margin-top: 80px;
+  padding: clamp(40px, 8vw, 80px) 0;
+  background: hsl(var(--c-primary) / 0.05);
+  border-radius: var(--rad-xl);
+  text-align: center;
+  border: 1px solid hsl(var(--c-primary) / 0.1);
+}
+
+.impact-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 800;
+  color: hsl(var(--c-dark));
+  max-width: 900px;
+  margin: 0 auto 32px;
+  line-height: 1.2;
+}
+
+.impact-divider {
+  width: 80px;
+  height: 4px;
+  background: hsl(var(--c-primary));
+  margin: 0 auto 32px;
+  border-radius: 2px;
+}
+
+.impact-sub {
+  font-size: 1.15rem;
+  color: hsl(var(--c-text-muted));
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}

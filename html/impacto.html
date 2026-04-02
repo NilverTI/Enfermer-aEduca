@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Final - Enfermería Educa</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/impacto.css">
+</head>
+<body>
+    <section class="final-impact-section fade-up">
+        <div class="container impact-wrap">
+            <div class="impact-content">
+                <h2 class="impact-text">
+                    “Enfermería Educa: conocimiento que puede <span class="text-gradient">salvar vidas</span>.”
+                </h2>
+                <div class="impact-divider"></div>
+                <p class="impact-sub">
+                    Nuestro proyecto no solo informa, sino que busca prevenir enfermedades a través del aprendizaje constante y accesible.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Base Animations JS (IntersectionObserver) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

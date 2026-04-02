@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Equipo - Enfermería Educa</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/equipo.css">
+</head>
+<body>
+    <section id="equipo" class="section-container container team-section">
+        <div class="team-header">
+            <h2>Nuestro equipo</h2>
+        </div>
+
+        <div class="team-grid-cards">
+            <!-- Miembro 1 -->
+            <div class="team-card-visual fade-up" style="animation-delay: 0.1s;">
+                <img src="../img/F1.jpeg" alt="Mauricio Salvador Noemi Analy" class="team-avatar">
+                <h4 class="team-name">Mauricio Salvador Noemi Analy</h4>
+                <p class="team-role">Coordinación general</p>
+            </div>
+            <!-- Miembro 2 -->
+            <div class="team-card-visual fade-up" style="animation-delay: 0.2s;">
+                <img src="../img/F2.jpeg" alt="Ventura Henostroza Ana Paula" class="team-avatar">
+                <h4 class="team-name">Ventura Henostroza Ana Paula</h4>
+                <p class="team-role">Contenido</p>
+            </div>
+            <!-- Miembro 3 -->
+            <div class="team-card-visual fade-up" style="animation-delay: 0.3s;">
+                <img src="../img/F5.jpeg" alt="Castillo Castro Greace Stephanie" class="team-avatar">
+                <h4 class="team-name">Castillo Castro Greace Stephanie</h4>
+                <p class="team-role">Redes sociales / Marketing</p>
+            </div>
+            <!-- Miembro 4 -->
+            <div class="team-card-visual fade-up" style="animation-delay: 0.4s;">
+                <img src="../img/Man.jpeg" alt="Álvarez Talla Isaí Daniel" class="team-avatar">
+                <h4 class="team-name">Álvarez Talla Isaí Daniel</h4>
+                <p class="team-role">Redes sociales / Marketing</p>
+            </div>
+            <!-- Miembro 5 -->
+            <div class="team-card-visual fade-up" style="animation-delay: 0.5s;">
+                <img src="../img/F4.jpeg" alt="Castillo Lopez Leidy Geraldine" class="team-avatar">
+                <h4 class="team-name">Castillo Lopez Leidy Geraldine</h4>
+                <p class="team-role">Contenido</p>
+            </div>
+            <!-- Miembro 6 -->
+            <div class="team-card-visual fade-up" style="animation-delay: 0.6s;">
+                <img src="../img/F3.jpeg" alt="Grecia Samantha Yman Vilchez" class="team-avatar">
+                <h4 class="team-name">Grecia Samantha Yman Vilchez</h4>
+                <p class="team-role">Diseño</p>
+            </div>
+            <!-- Miembro 7 -->
+            <div class="team-card-visual fade-up" style="animation-delay: 0.7s;">
+                <img src="../img/F6.jpeg" alt="Cervantes Arcos Yesire Alejandra" class="team-avatar">
+                <h4 class="team-name">Cervantes Arcos Yesire Alejandra</h4>
+                <p class="team-role">Diseño</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Base Animations JS (IntersectionObserver) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

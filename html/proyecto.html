@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Proyecto - Enfermería Educa</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/proyecto.css">
+</head>
+<body>
+    <section id="proyecto" class="section-container container" style="margin-top: 30px;">
+        <div class="project-minimal-layout fade-up">
+
+            <div class="project-minimal-header">
+                <span class="project-tag">El Proyecto</span>
+                <h2 class="project-title">
+                    Democratizando <br>
+                    <span class="project-accent">la salud de la comunidad.</span>
+                </h2>
+                <p class="project-description">
+                    <strong>¿Qué es?</strong> Una plataforma educativa digital.<br>
+                    <strong>¿Para quién?</strong> Comunidad general y estudiantes de enfermería.<br>
+                    <strong>¿Qué ofrece?</strong> Guías prácticas, prevención y contenido confiable para el cuidado
+                    de la salud.
+                </p>
+            </div>
+
+            <div class="project-minimal-features">
+                <div class="min-feature">
+                    <div class="min-icon-wrapper">
+                        <!-- Icono de Objetivo -->
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <line x1="21.17" y1="8" x2="12" y2="8"></line>
+                            <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+                            <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+                        </svg>
+                    </div>
+                    <div class="min-feature-text">
+                        <h4>Objetivo Central</h4>
+                        <p>Compartir conocimientos útiles de salud para apoyar el aprendizaje clínico, el
+                            autocuidado directo y la prevención responsable de enfermedades.</p>
+                    </div>
+                </div>
+
+                <div class="min-feature">
+                    <div class="min-icon-wrapper">
+                        <!-- Icono de Comunidad -->
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="min-feature-text">
+                        <h4>Enfoque Comunitario</h4>
+                        <p>Educación dirigida a la comunidad general, estudiantes y personal técnico formativo
+                            mediante un contenido interactivo 100% digital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Base Animations JS (IntersectionObserver) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

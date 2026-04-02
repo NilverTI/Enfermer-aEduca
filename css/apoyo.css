@@ -1,0 +1,215 @@
+/* =========================================
+   Unified Community Section (QR + Social)
+   ========================================= */
+.comunidad-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+@media (min-width: 900px) {
+  .comunidad-layout {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+  }
+}
+
+/* Support Card (Left) */
+.support-minimal-card {
+  background: linear-gradient(135deg, hsl(var(--c-dark)), hsl(var(--c-dark-soft)));
+  border-radius: var(--rad-xl);
+  padding: 50px 40px 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.support-alert {
+  font-size: 0.65rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: hsl(var(--c-primary));
+  background: hsl(var(--c-primary) / 0.1);
+  padding: 6px 16px;
+  border-radius: var(--rad-full);
+  margin-bottom: 24px;
+  border: 1px solid hsl(var(--c-primary) / 0.2);
+}
+
+.support-qr-box {
+  background: white;
+  padding: 24px;
+  border-radius: var(--rad-xl);
+  width: fit-content;
+  margin-bottom: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: transform var(--trans-normal);
+}
+
+.support-qr-box img {
+  width: 240px;
+  height: 240px;
+  display: block;
+}
+
+.support-text p {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.4);
+  max-width: 220px;
+  margin: 0 auto 20px;
+  font-weight: 400;
+}
+
+.support-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  font-size: 0.6rem;
+  border-radius: var(--rad-full);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Redes Sociales Premium Stack */
+.social-stack-premium {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  padding: 20px 24px;
+  border-radius: var(--rad-lg);
+  background: white;
+  border: 1px solid hsl(var(--c-border));
+  transition: all var(--trans-normal);
+  text-decoration: none;
+  color: hsl(var(--c-dark));
+  box-shadow: var(--shadow-sm);
+}
+
+.social-btn:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-md);
+  border-color: hsl(var(--c-primary) / 0.3);
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-info {
+  flex: 1;
+}
+
+.social-info strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.social-info span {
+  font-size: 0.85rem;
+  color: hsl(var(--c-text-muted));
+}
+
+.social-arrow {
+  font-weight: 700;
+  color: hsl(var(--c-primary));
+  opacity: 0.5;
+  transition: var(--trans-fast);
+}
+
+.social-btn:hover .social-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* Specific button colors */
+.tiktok-premium .social-icon { background: #000; color: #fff; }
+.instagram-premium .social-icon { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; }
+
+/* Final Impact Section */
+.final-impact {
+  padding: 100px 0;
+  background: linear-gradient(to bottom, transparent, hsl(var(--c-primary) / 0.03));
+  text-align: center;
+}
+
+.impact-wrap {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.impact-text {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 32px;
+  color: hsl(var(--c-dark));
+}
+
+.impact-text .highlight {
+  color: hsl(var(--c-primary));
+  position: relative;
+  display: inline-block;
+}
+
+.impact-text .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: hsl(var(--c-primary) / 0.1);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.impact-divider {
+  width: 60px;
+  height: 4px;
+  background: hsl(var(--c-primary));
+  margin: 0 auto 32px;
+  border-radius: var(--rad-full);
+}
+
+.impact-sub {
+  font-size: 1.25rem;
+  color: hsl(var(--c-text-muted));
+  font-weight: 500;
+}
+
+/* Responsive adjustments for Apoyo */
+@media (max-width: 600px) {
+  .support-minimal-card { padding: 40px 20px; }
+  .support-qr-box img { width: 180px; height: 180px; }
+  .social-btn { padding: 16px; }
+  .social-icon { width: 40px; height: 40px; margin-right: 16px; }
+  .social-info strong { font-size: 1rem; }
+}
