@@ -9,16 +9,17 @@
 
 .topic-card {
   background: white;
-  border: 1px solid hsl(var(--c-border));
+  border: 1px solid hsl(var(--c-border) / 0.5);
   border-radius: var(--rad-lg);
-  padding: 24px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   cursor: pointer;
   transition: all var(--trans-normal);
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .topic-card::after {
@@ -27,23 +28,29 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: hsl(var(--c-primary));
+  height: 6px;
+  background: linear-gradient(90deg, hsl(var(--c-primary)), hsl(var(--c-accent)));
   opacity: 0;
   transition: opacity var(--trans-normal);
 }
 
 .topic-card:hover,
 .topic-card:focus {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-  border-color: hsl(var(--c-primary) / 0.3);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: hsl(var(--c-primary) / 0.2);
+  background: rgba(255, 255, 255, 0.95);
   outline: none;
 }
 
 .topic-card:hover::after,
 .topic-card:focus::after {
   opacity: 1;
+}
+
+.topic-card:hover .acc-num {
+  color: hsl(var(--c-primary) / 0.15);
+  transform: scale(1.1) translateX(5px);
 }
 
 .topic-card-header {
@@ -58,45 +65,49 @@
 
 .topic-card-footer {
   margin-top: auto;
-  padding-top: 16px;
-  border-top: 1px dashed hsl(var(--c-border));
+  padding-top: 20px;
+  border-top: 1px solid hsl(var(--c-border) / 0.3);
   display: flex;
   justify-content: flex-end;
 }
 
 .view-more {
   color: hsl(var(--c-primary));
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: color var(--trans-fast);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all var(--trans-fast);
 }
 
 .topic-card:hover .view-more {
   color: hsl(var(--c-primary-dark));
+  transform: translateX(4px);
 }
 
 .acc-num {
   font-family: var(--font-display);
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 3.5rem;
+  font-weight: 900;
   color: hsl(var(--c-primary) / 0.08);
   line-height: 1;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
+  transition: all var(--trans-normal);
 }
 
 .acc-title {
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 800;
   margin-bottom: 12px;
-  color: hsl(var(--c-dark-soft));
-  line-height: 1.3;
+  color: hsl(var(--c-dark));
+  line-height: 1.2;
 }
 
 .acc-desc {
   color: hsl(var(--c-text-muted));
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Modal Styling */

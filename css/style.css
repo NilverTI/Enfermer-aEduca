@@ -10,32 +10,42 @@
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
 
-  /* HSL Color Palette */
-  --c-primary: 204 76% 51%;
-  --c-primary-dark: 204 80% 38%;
-  --c-primary-light: 204 88% 90%;
-  --c-accent: 250 84% 65%;
-  --c-dark: 215 28% 12%;
-  --c-dark-soft: 215 20% 25%;
-  --c-text-muted: 215 15% 45%;
+  /* HSL Color Palette (Premium Refined) */
+  --c-primary: 204 100% 48%;
+  --c-primary-dark: 204 90% 35%;
+  --c-primary-light: 204 100% 95%;
+  --c-accent: 260 90% 68%;
+  --c-accent-soft: 260 85% 95%;
+  --c-dark: 220 40% 10%;
+  --c-dark-soft: 220 20% 25%;
+  --c-text-muted: 220 15% 45%;
   --c-bg: 210 100% 98%;
+  --c-bg-layer: 215 100% 99%;
   --c-surface: 0 0% 100%;
-  --c-border: 210 30% 90%;
+  --c-border: 215 25% 90%;
 
-  /* Shadows */
-  --shadow-sm: 0 2px 8px -2px hsl(var(--c-dark) / 0.05), 0 4px 16px -4px hsl(var(--c-dark) / 0.02);
-  --shadow-md: 0 8px 24px -6px hsl(var(--c-dark) / 0.08), 0 12px 32px -8px hsl(var(--c-dark) / 0.04);
-  --shadow-lg: 0 24px 48px -12px hsl(var(--c-primary) / 0.15), 0 4px 24px -4px hsl(var(--c-dark) / 0.06);
+  /* Shadows (Multi-layered Premium) */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.02), 
+               0 2px 4px rgba(0,0,0,0.02), 
+               0 4px 8px rgba(0,0,0,0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 
+               0 10px 15px -3px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 25px -5px hsl(var(--c-primary) / 0.1), 
+               0 20px 48px -12px hsl(var(--c-primary) / 0.15);
+  --shadow-xl: 0 25px 60px -15px rgba(0,0,0,0.1),
+               0 0 40px -10px hsl(var(--c-primary) / 0.05);
 
-  /* Borders & Transitions */
-  --rad-sm: 8px;
-  --rad-md: 16px;
-  --rad-lg: 24px;
-  --rad-xl: 32px;
+  /* Borders & Core Transitions */
+  --rad-sm: 10px;
+  --rad-md: 18px;
+  --rad-lg: 28px;
+  --rad-xl: 36px;
   --rad-full: 9999px;
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
   --trans-fast: 0.2s var(--ease-smooth);
   --trans-normal: 0.4s var(--ease-smooth);
+  --trans-slow: 0.7s var(--ease-smooth);
 }
 
 /* Reset & Core */
@@ -57,8 +67,9 @@ body {
   color: hsl(var(--c-dark));
   background-color: hsl(var(--c-bg));
   background-image:
-    radial-gradient(circle at 15% 0%, hsl(var(--c-primary-light) / 0.8) 0%, transparent 40%),
-    radial-gradient(circle at 85% 10%, hsl(var(--c-accent) / 0.1) 0%, transparent 40%);
+    radial-gradient(circle at 0% 0%, hsl(var(--c-primary-light) / 0.6) 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, hsl(var(--c-accent-soft) / 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, hsl(var(--c-bg-layer)) 0%, transparent 100%);
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
@@ -70,9 +81,9 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 a {
@@ -92,7 +103,7 @@ svg {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   width: 100%;
   margin: 0 auto;
   padding: 0 24px;
@@ -103,6 +114,7 @@ svg {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 900;
 }
 
 /* =========================================
@@ -114,36 +126,49 @@ svg {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: hsl(var(--c-surface) / 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid hsl(var(--c-border) / 0.5);
-  transition: transform var(--trans-normal), background var(--trans-normal);
+  background: hsl(var(--c-surface) / 0.6);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid hsl(var(--c-surface) / 0.3);
+  transition: all var(--trans-normal);
+}
+
+.nav::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--c-primary) / 0.3), transparent);
 }
 
 .nav-scrolled {
-  background: hsl(var(--c-surface) / 0.9);
-  box-shadow: var(--shadow-sm);
+  background: hsl(var(--c-surface) / 0.85);
+  box-shadow: var(--shadow-md);
+  padding: 4px 0;
 }
 
 .nav-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 84px;
+  transition: height var(--trans-normal);
 }
 
 .nav-scrolled .nav-wrap {
-  height: 64px;
+  height: 68px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.25rem;
+  font-weight: 900;
+  font-size: 1.35rem;
+  letter-spacing: -0.04em;
 }
 
 .brand-mark {
@@ -158,22 +183,31 @@ svg {
 
 .nav-links {
   display: flex;
-  gap: 8px;
+  gap: 6px;
+  padding: 6px;
+  background: hsl(var(--c-dark) / 0.03);
+  border-radius: var(--rad-full);
+  border: 1px solid hsl(var(--c-border) / 0.4);
 }
 
 .nav-links a {
-  padding: 8px 16px;
+  padding: 8px 20px;
   border-radius: var(--rad-full);
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: hsl(var(--c-dark) / 0.7);
+  transition: all var(--trans-fast);
 }
 
-.nav-links a:hover,
+.nav-links a:hover {
+  color: hsl(var(--c-primary));
+  background: hsl(var(--c-surface) / 0.8);
+}
+
 .nav-links a.active {
-  background: hsl(var(--c-primary) / 0.1);
-  color: hsl(var(--c-primary-dark));
-  font-weight: 700;
-  box-shadow: inset 0 -2px 0 hsl(var(--c-primary));
+  background: hsl(var(--c-surface));
+  color: hsl(var(--c-primary));
+  box-shadow: var(--shadow-sm);
 }
 
 .nav-mobile-toggle {
@@ -234,29 +268,41 @@ svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 16px 32px;
+  gap: 12px;
+  padding: 18px 36px;
   border-radius: var(--rad-full);
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
+  transition: all var(--trans-normal);
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-primary {
-  background: hsl(var(--c-primary));
+  background: linear-gradient(135deg, hsl(var(--c-primary)), hsl(var(--c-primary-dark)));
   color: white;
-  box-shadow: 0 4px 14px hsl(var(--c-primary) / 0.39);
+  box-shadow: 0 10px 25px -5px hsl(var(--c-primary) / 0.4);
 }
 
 .btn-primary:hover {
-  background: hsl(var(--c-primary-dark));
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px -8px hsl(var(--c-primary) / 0.5);
+  background: linear-gradient(135deg, hsl(var(--c-primary-dark)), hsl(var(--c-primary)));
 }
 
 .btn-secondary {
-  background: white;
+  background: hsl(var(--c-surface));
   color: hsl(var(--c-dark));
   border: 1px solid hsl(var(--c-border));
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background: hsl(var(--c-bg));
+  border-color: hsl(var(--c-primary) / 0.3);
+  transform: translateY(-2px);
 }
 
 .hero {
@@ -540,40 +586,69 @@ svg {
   position: fixed;
   bottom: 110px;
   right: 32px;
-  width: 340px;
+  width: 360px;
   background: white;
-  border-radius: var(--rad-xl);
-  padding: 24px;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid hsl(var(--c-border));
+  border-radius: var(--rad-lg);
+  padding: 0;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid hsl(var(--c-border) / 0.5);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.4s var(--ease-smooth);
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.5s var(--ease-out-back);
+  overflow: hidden;
 }
 
 .bot-panel.active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .bot-header {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  padding: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+}
+
+.bot-header h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.bot-body {
+  padding: 24px;
+}
+
+.bot-body p {
+  font-size: 0.95rem;
+  color: hsl(var(--c-text-muted));
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .btn-whatsapp {
   width: 100%;
   background: #25D366;
   color: white;
-  padding: 12px;
+  padding: 16px;
   border-radius: var(--rad-md);
   text-align: center;
-  font-weight: 600;
-  display: inline-block;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all var(--trans-fast);
+}
+
+.btn-whatsapp:hover {
+  background: #20BA5A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
 }
 
 /* =========================================

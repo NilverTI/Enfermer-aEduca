@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Enfermería Educa</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="icon" type="image/x-icon" href="../img/favi.ico">
+</head>
+
+<body class="admin-body">
+    <div class="dashboard-container">
+        <header class="dashboard-header animate-fade-in">
+            <div class="brand-info">
+                <h1>Panel de Control</h1>
+                <p>Gestión de Libros y Recursos</p>
+            </div>
+            <button id="logoutBtn" class="btn btn-secondary btn-sm">Cerrar Sesión</button>
+        </header>
+
+        <section class="add-book-section dashboard-card">
+            <h3>+ Agregar Nuevo Libro</h3>
+            <form id="addBookForm" class="admin-form">
+                <div class="form-group">
+                    <label for="bookTitle">Título del Libro</label>
+                    <input type="text" id="bookTitle" required placeholder="Ej: Anatomía Humana Avanzada">
+                </div>
+                <div class="form-group grid grid-2">
+                    <div>
+                        <label for="bookAuthor">Autor / Editorial</label>
+                        <input type="text" id="bookAuthor" required placeholder="Nombre del autor">
+                    </div>
+                    <div>
+                        <label for="bookCategory">Categoría</label>
+                        <select id="bookCategory" class="premium-select">
+                            <option value="General">General</option>
+                            <option value="Urgencias">Urgencias</option>
+                            <option value="Pediatría">Pediatría</option>
+                            <option value="Farmacología">Farmacología</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bookUrl">URL del Libro (Google Drive, Mega, etc.)</label>
+                    <input type="url" id="bookUrl" required placeholder="https://drive.google.com/...">
+                </div>
+                <div class="form-group">
+                    <label for="bookCover">URL de la Carátula (Imagen)</label>
+                    <input type="url" id="bookCover" required placeholder="https://enlace-imagen.png">
+                </div>
+                <button type="submit" class="btn btn-primary w-full" id="submitBtn">Publicar Libro</button>
+                <div id="formMsg" class="form-status"></div>
+            </form>
+        </section>
+
+        <section class="manage-books-section">
+            <h3>Libros Publicados</h3>
+            <div id="booksList" class="book-grid">
+                <!-- Libros cargados dinámicamente -->
+                <p class="loading-msg">Cargando libros...</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Enfermería Educa</title>
+    <!-- New Premium Login Design CSS -->
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/x-icon" href="../img/favi.ico">
+</head>
+
+<body>
+    <!-- Main container for the login form with animated border -->
+    <div class="box">
+        <form id="loginForm">
+            <!-- Title section -->
+            <div class="title">
+                <h1>Admin Login</h1>
+            </div>
+            <!-- Input fields container -->
+            <div class="input-box">
+                <!-- Email input (mapped from Username for functionality) -->
+                <label for="email" class="label-color">Correo Electrónico</label>
+                <input id="email" name="email" type="email" placeholder="tu@email.com" required />
+
+                <!-- Password input -->
+                <label for="password" class="label-color">Contraseña</label>
+                <input id="password" name="password" type="password" placeholder="••••••••" required />
+
+                <!-- Login button -->
+                <input type="submit" class="Login" value="Ingresar" />
+
+                <!-- Error Message Container (Functional Integration) -->
+                <div id="loginError" class="error-msg"></div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Supabase Library & Logic -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>

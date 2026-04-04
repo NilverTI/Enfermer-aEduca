@@ -19,90 +19,12 @@
     <link rel="stylesheet" href="../css/equipo.css">
     <link rel="stylesheet" href="../css/apoyo.css">
     <link rel="stylesheet" href="../css/impacto.css">
+    <link rel="stylesheet" href="../css/libros.css">
 
     <!-- Favicon & Mobile Icons -->
     <link rel="icon" type="image/x-icon" href="../img/favi.ico">
     <link rel="apple-touch-icon" href="https://enfermeriaeduca.vercel.app/img/vimg.png">
 
-    <style>
-        .coming-soon-container {
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 80px 20px;
-            background: radial-gradient(circle at top right, hsl(var(--c-primary) / 0.05), transparent 40%),
-                radial-gradient(circle at bottom left, hsl(var(--c-primary) / 0.05), transparent 40%);
-        }
-
-        .cs-card {
-            max-width: 600px;
-            background: white;
-            padding: 60px 40px;
-            border-radius: var(--rad-xl);
-            box-shadow: var(--shadow-xl);
-            border: 1px solid hsl(var(--c-border) / 0.5);
-            position: relative;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s var(--ease-smooth);
-        }
-
-        .cs-card.in-view {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .cs-icon {
-            font-size: 80px;
-            margin-bottom: 24px;
-            display: block;
-        }
-
-        .cs-title {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-family: var(--font-display);
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-
-        .cs-subtitle {
-            font-size: 1.25rem;
-            color: hsl(var(--c-text-muted));
-            margin-bottom: 40px;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 14px 28px;
-            background: hsl(var(--c-primary));
-            color: white;
-            border-radius: var(--rad-full);
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s var(--ease-smooth);
-            box-shadow: 0 10px 20px hsl(var(--c-primary) / 0.2);
-        }
-
-        .back-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px hsl(var(--c-primary) / 0.3);
-            background: hsl(var(--c-primary-dark));
-        }
-
-        .cs-decoration {
-            position: absolute;
-            top: -20px;
-            right: -20px;
-            font-size: 100px;
-            opacity: 0.03;
-            transform: rotate(15deg);
-        }
-    </style>
 </head>
 
 <body>
@@ -142,26 +64,74 @@
     </nav>
 
     <main>
-        <div class="coming-soon-container">
-            <div class="cs-card fade-up">
-                <span class="cs-icon">📚</span>
-                <div class="cs-decoration">📘</div>
-                <h1 class="cs-title">Muy pronto</h1>
-                <p class="cs-subtitle">
-                    Estamos preparando <strong> todos nuestros recursos </strong> educativos,
-                    guías descargables y libros exclusivos para ti.
-                    Vuelve pronto para descubrirlos.
-                </p>
-                <a href="../index.html" class="back-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m15 18-6-6 6-6" />
-                    </svg>
-                    Regresar al Inicio
-                </a>
+        <section class="section-hero-books">
+            <div class="container">
+                <div class="hero-content-books fade-up">
+                    <h1 class="cs-title">Recursos y Libros</h1>
+                    <p class="cs-subtitle">Explora nuestra biblioteca digital de enfermería. Recursos actualizados para
+                        tu formación profesional.</p>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section class="section-books-grid container">
+            <div id="dynamicBooksList" class="books-display-grid">
+                <!-- Libros se cargarán aquí -->
+                <div class="loading-spinner">Cargando biblioteca...</div>
+            </div>
+        </section>
     </main>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Configuration - PLEASE REPLACE WITH YOUR SUPABASE KEYS
+        const SUPABASE_URL = 'https://jywsnwexfpqnzwvpksmi.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp5d3Nud2V4ZnBxbnp3dnBrc21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxODU4NTksImV4cCI6MjA5MDc2MTg1OX0.GE8c9uG4kQi9ZIOhlcD1bxxRsbHYCQ1wY6_OENE09Vg';
+        const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const list = document.getElementById('dynamicBooksList');
+
+            try {
+                const { data: books, error } = await supabaseClient
+                    .from('libros')
+                    .select('*')
+                    .order('id', { ascending: false });
+
+                if (error) throw error;
+
+                if (!books || books.length === 0) {
+                    list.innerHTML = `
+                        <div class="no-books-msg">
+                            <p>Aún no hay libros disponibles. ¡Vuelve pronto!</p>
+                        </div>`;
+                    return;
+                }
+
+                list.innerHTML = '';
+                books.forEach(book => {
+                    const card = document.createElement('div');
+                    card.className = 'book-item-card fade-up';
+                    card.innerHTML = `
+                        <div class="book-cover-wrap">
+                            <img src="${book.cover_url}" alt="${book.titulo}" loading="lazy">
+                            <div class="book-badge">${book.categoria}</div>
+                        </div>
+                        <div class="book-info">
+                            <h3>${book.titulo}</h3>
+                            <p class="book-author">Por: ${book.autor}</p>
+                            <a href="${book.url_descarga}" target="_blank" class="btn btn-primary btn-sm">Descargar</a>
+                        </div>
+                    `;
+                    list.appendChild(card);
+                });
+            } catch (err) {
+                console.error('Error fetching books:', err);
+                list.innerHTML = '<p class="error-msg">Error al cargar los libros. Intenta más tarde.</p>';
+            }
+        });
+    </script>
 
     <footer class="footer">
         <div class="container footer-wrap">
@@ -209,14 +179,16 @@
             <h4 id="botDialogTitle">Comunidad en WhatsApp</h4>
             <button class="bot-close" id="botClose" aria-label="Cerrar panel de WhatsApp">✕</button>
         </div>
-        <p>Recibe noticias, infografías y avances del proyecto directamente en tu celular.</p>
-        <a href="https://whatsapp.com/channel/0029VbCB3ye0LKZHQ5l6R90v" target="_blank" rel="noopener noreferrer"
-            class="btn btn-whatsapp">
-            <svg viewBox="0 0 24 24" width="28" height="28">
-                <use href="#icon-whatsapp"></use>
-            </svg>
-            Únete para novedades
-        </a>
+        <div class="bot-body">
+            <p>Recibe noticias, infografías y avances del proyecto directamente en tu celular.</p>
+            <a href="https://whatsapp.com/channel/0029VbCB3ye0LKZHQ5l6R90v" target="_blank" rel="noopener noreferrer"
+                class="btn-whatsapp">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <use href="#icon-whatsapp"></use>
+                </svg>
+                Únete para novedades
+            </a>
+        </div>
     </div>
 
     <!-- Botón Flotante interactivo -->

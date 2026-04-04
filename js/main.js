@@ -126,3 +126,25 @@ function initRevealObserver() {
     // Watch for new components
     window.addEventListener('componentsLoaded', observeElements);
 }
+
+// 4. Premium Parallax Effect for floating elements
+function initParallax() {
+    const floaters = document.querySelectorAll('.floater, .glass-pill');
+    if (floaters.length === 0) return;
+
+    window.addEventListener('mousemove', (e) => {
+        const { clientX: x, clientY: y } = e;
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        
+        floaters.forEach((el, index) => {
+            const speed = (index + 1) * 0.02;
+            const xOffset = (centerX - x) * speed;
+            const yOffset = (centerY - y) * speed;
+            el.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+        });
+    });
+}
+
+// Add initParallax to the DOMContentLoaded
+document.addEventListener('DOMContentLoaded', initParallax);
